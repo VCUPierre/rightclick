@@ -1,9 +1,9 @@
 import React from 'react';
-import LandingPage from './pages/landingPage/LandingPage'
+import Home from './Home/components/Home'
 import './App.css';
 
 function App() {
-  return <LandingPage />
+  return <Home />
 }
 
 export default App;
