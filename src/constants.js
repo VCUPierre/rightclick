@@ -1,0 +1,8 @@
+export const TITLE = "Something"
+export const SOCIAL_INSTAGRAM = "" 
+export const SOCIAL_FACEBOOK = ""
+export const SOCIAL_TWITTER = ""
+export const SOCIAL_OTHER = ""
+export const LINK_1 = ""
+export const LINK_2 = ""
+export const LINK_3 = ""
