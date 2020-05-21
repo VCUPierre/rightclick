@@ -1,6 +1,25 @@
-import React, {Component} from 'react';
-import Header from './Header/Header'
+import React from 'react';
+import {Grid, GridColumn} from 'semantic-ui-react'
+import Profile from './Profile/Profile'
+import ProfilePic from './ProfilePic/ProfilePic'
 
-export default class Home extends Component {
-
-}
+// export default class Home extends Component {
+//     render(){
+//         return <p>Hello World</p>
+//     }
+// }
+const Home = () => (
+    <Grid centered columns={3}>
+        <Grid.Row>
+            <GridColumn>
+                <Profile />
+            </GridColumn>
+        </Grid.Row>
+        <Grid.Row>
+            <Grid.Column>
+                <ProfilePic />
+            </Grid.Column>
+        </Grid.Row>
+    </Grid>
+)
+export default Home
