@@ -3,11 +3,6 @@ import {Grid, GridColumn} from 'semantic-ui-react'
 import Profile from './Profile/Profile'
 import ProfilePic from './ProfilePic/ProfilePic'
 
-// export default class Home extends Component {
-//     render(){
-//         return <p>Hello World</p>
-//     }
-// }
 const Home = () => (
     <Grid centered columns={3}>
         <Grid.Row>
