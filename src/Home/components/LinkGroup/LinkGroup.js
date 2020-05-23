@@ -1,26 +1,16 @@
 import React from 'react'
 import { Segment, Header } from 'semantic-ui-react'
+import "./LinkGroup.css"
 
-const numberOfLinks = 4;
-const groupName = "Music Links";
-const isNamed = true;
-const LinkGroupTitle = <Header as='h3'>{groupName}</Header>
-const calculateSegments = () => {
-    for (let i = 0; i < numberOfLinks; i++){
-     return <Segment>Link-{i}</Segment>
-    }
-}
-
-const LinkGroup = () => (
-    <div>
-        {isNamed ? LinkGroupTitle : ""}
+const LinkGroup = (props) => (
+    <div className="stretched">
+        <Header>{props.links.groupName}</Header>
         <Segment.Group raised>
-           {calculateSegments()}
+            {props.links.group.map(element => {
+                return <Segment color='green' className="pushDown" >{element.name}</Segment>   
+            })}
         </Segment.Group>
     </div>
 )
 
 export default LinkGroup
-
-// const LinkGroup = ({numberOfLinks, groupName, isNamed}) = {
-// }
