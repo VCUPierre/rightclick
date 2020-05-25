@@ -18,7 +18,7 @@ const isInternalLink = (element) => {
 
 const featuredLink = (element) => {
     return <Segment color='green' className="pushDown">
-        <Label as='a' color='green' ribbon>
+        <Label as='a' color='green' ribbon className="bannerPosition">
           {element.featuredText}
         </Label>
         {isInternalLink(element)}
