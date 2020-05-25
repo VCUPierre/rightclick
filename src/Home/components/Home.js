@@ -3,7 +3,7 @@ import {Grid, GridColumn} from 'semantic-ui-react'
 import Profile from './Profile/Profile'
 import ProfilePic from './ProfilePic/ProfilePic'
 import LinkGroup from './LinkGroup/LinkGroup'
-import { LINK_GROUP_1 } from '../../constants.js'
+import { LINK_GROUP_1, LINK_GROUP_2 } from '../../constants.js'
 
 const Home = () => (
     <Grid centered columns={2}>
@@ -19,6 +19,9 @@ const Home = () => (
         </Grid.Row>
         <Grid.Row>
             <LinkGroup links={LINK_GROUP_1}/>
+        </Grid.Row>
+        <Grid.Row>
+            <LinkGroup links={LINK_GROUP_2}/>
         </Grid.Row>
     </Grid>
 )
