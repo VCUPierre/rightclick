@@ -41,8 +41,8 @@ export const LINK_GROUP_2 = {
             name: "YouTube",
             link: "https://www.youtube.com",
             internal: false,
-            featured: false,
-            featuredText: "", 
+            featured: true,
+            featuredText: "Coming Soon", 
             pinned: false,
         },
         {

@@ -8,7 +8,9 @@ const isInternalLink = (element) => {
     return <div>
         {element.internal 
         ? 
-        <InternalLinks link={element}/> 
+        <Segment color='green' className="pushDown">
+            <InternalLinks link={element}/> 
+        </Segment>
         : 
         <Segment color='green' className="pushDown">
             <ExternalLinks link={element}/>
@@ -17,46 +19,37 @@ const isInternalLink = (element) => {
 }
 
 const featuredLink = (element) => {
-    return <Segment color='green' className="pushDown">
+    return <div>
         <Label as='a' color='green' ribbon className="bannerPosition">
           {element.featuredText}
         </Label>
-        {isInternalLink(element)}
-    </Segment>
+        {isInternalLink(element, element.featured)}
+    </div>
 }
-const pinnedLink = (element) => {
-    return <Segment 
-    color='green' 
-    className="pushDown"
-    label={{ as: 'a', corner: 'left', icon: 'chess king' }}>
-        {isInternalLink(element)}
-    </Segment>
-}
+// const pinnedLink = (element) => {
+//     return <Segment 
+//     color='green' 
+//     className="pushDown">
+//         {isInternalLink(element, )}
+//     </Segment>
+// }
 
 const Links = (props) => (
     <div>
         {props.link.featured 
         ? 
         featuredLink(props.link) 
-        : 
-        (
-            props.link.pinned 
-            ?
-            pinnedLink(props.link)
-            :
-            isInternalLink(props.link)
-        )}
-    </div>
-    // return  <Segment color='green' className="pushDown" >
-    //             {element.internal 
-    //                         ?
-    //                         <InternalLinks link={element}/> 
-    //                         :
-    //                         <Button as='a' href={element.link} fluid>
-    //                             {element.name}
-    //                         </Button>
-    //                         }
-    //                     </Segment>       
+        :
+        isInternalLink(props.link) 
+        // (
+        //     props.link.pinned 
+        //     ?
+        //     pinnedLink(props.link)
+        //     :
+        //     isInternalLink(props.link)
+        // )
+        }
+    </div>    
 )
 
 export default Links
