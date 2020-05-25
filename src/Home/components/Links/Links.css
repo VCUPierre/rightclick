@@ -1,9 +1,21 @@
 .pushDown{
     margin-bottom: 5px !important;
 }
-.bannerPosition {
+.bannerPositionL {
     z-index: 100 !important;
     position: absolute !important;
     left: -3% !important;
+    top: -1em !important;
+}
+.bannerPositionM {
+    z-index: 100 !important;
+    position: absolute !important;
+    left: -8% !important;
+    top: -1em !important;
+}
+.bannerPositionS {
+    z-index: 100 !important;
+    position: absolute !important;
+    left: -8% !important;
     top: -1em !important;
 }
