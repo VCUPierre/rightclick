@@ -1,21 +1,47 @@
 import React from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import { Button, Header, Image, Modal, Label } from 'semantic-ui-react'
 
 const ModalModalExample = (props) => (
-  <Modal trigger={<Button fluid>{props.link.name}</Button>}>
-    <Modal.Header>Select a Photo</Modal.Header>
-    <Modal.Content image>
-      <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-      <Modal.Description>
-        <Header>Default Profile Image</Header>
-        <p>
-          We've found the following gravatar image associated with your e-mail
-          address.
-        </p>
-        <p>Is it okay to use this photo?</p>
-      </Modal.Description>
-    </Modal.Content>
-  </Modal>
+  <div>
+    {props.link.featured 
+    ?
+    <div>
+      <Label as='a' color='green' ribbon className="bannerPosition">
+              {props.link.featuredText}
+      </Label>
+      
+      <Modal trigger={<Button fluid>{props.link.name}</Button>}>
+      <Modal.Header>Select a Photo</Modal.Header>
+      <Modal.Content image>
+        <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
+        <Modal.Description>
+          <Header>Default Profile Image</Header>
+          <p>
+            We've found the following gravatar image associated with your e-mail
+            address.
+          </p>
+          <p>Is it okay to use this photo?</p>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+  </div>
+  :
+    <Modal trigger={<Button fluid>{props.link.name}</Button>}>
+      <Modal.Header>Select a Photo</Modal.Header>
+      <Modal.Content image>
+        <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
+        <Modal.Description>
+          <Header>Default Profile Image</Header>
+          <p>
+            We've found the following gravatar image associated with your e-mail
+            address.
+          </p>
+          <p>Is it okay to use this photo?</p>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+  }
+</div>
 )
 
 export default ModalModalExample

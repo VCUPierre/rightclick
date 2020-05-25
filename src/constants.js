@@ -21,8 +21,8 @@ export const LINK_GROUP_1 = {
             name: "4am in Richmond",
             link: "https://unitedmasters.com/m/5e99d519a2ca6d196513ca76",
             internal: true,
-            featured: false,
-            featuredText: "",  
+            featured: true,
+            featuredText: "How long can this text actually be",  
             pinned: false,
         }
     ]
