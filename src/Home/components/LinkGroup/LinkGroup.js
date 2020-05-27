@@ -8,7 +8,7 @@ const LinkGroup = (props) => (
         <Header>{props.links.groupName}</Header>
         <Segment.Group raised>
             {props.links.group.map(element => {
-                return <Links link={element} />
+                return <Links link={element} deviceSize={props.deviceSize}/>
             })}
         </Segment.Group>
     </div>

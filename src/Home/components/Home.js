@@ -5,7 +5,7 @@ import ProfilePic from './ProfilePic/ProfilePic'
 import LinkGroup from './LinkGroup/LinkGroup'
 import { LINK_GROUP_1, LINK_GROUP_2 } from '../../constants.js'
 
-const Home = () => (
+const Home = (props) => (
     <Grid centered columns={2}>
         <Grid.Row>
             <GridColumn>
@@ -18,10 +18,10 @@ const Home = () => (
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-            <LinkGroup links={LINK_GROUP_1}/>
+            <LinkGroup links={LINK_GROUP_1} deviceSize={props.deviceSize}/>
         </Grid.Row>
         <Grid.Row>
-            <LinkGroup links={LINK_GROUP_2}/>
+            <LinkGroup links={LINK_GROUP_2} deviceSize={props.deviceSize}/>
         </Grid.Row>
     </Grid>
 )
