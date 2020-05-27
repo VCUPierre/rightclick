@@ -28,21 +28,6 @@ const isInternalLink = (element) => {
 
 const Links = (props) => (
     isInternalLink(props.link)
-    // <div>
-    //     {props.link.featured 
-    //     ? 
-    //     featuredLink(props.link) 
-    //     :
-    //     isInternalLink(props.link) 
-    //     // (
-    //     //     props.link.pinned 
-    //     //     ?
-    //     //     pinnedLink(props.link)
-    //     //     :
-    //     //     isInternalLink(props.link)
-    //     // )
-    //     }
-    // </div>    
 )
 
 export default Links
