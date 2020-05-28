@@ -2,20 +2,24 @@ export const TITLE = "Something"
 export const SOCIAL_LINKS = {
     group: [{
         name: "Instagram",
-        link: "instagram.com"
+        iconName: "instagram",
+        link: "https://instagram.com"
     },
     {
         name: "Facebook",
-        link: "facebook.com"
+        iconName: "facebook f",
+        link: "https://facebook.com"
     },
     {
         name: "Twitter",
-        link: "twitter.com"
+        iconName: "twitter",
+        link: "https://twitter.com"
     },
     {
         name: "Sound Cloud",
-        link: "soundcloud.com"
-    }
+        iconName: "soundcloud",
+        link: "https://soundcloud.com"
+    },
 ]}
 export const LINK_GROUP_1 = {
     groupName: "Music Links",
@@ -42,7 +46,15 @@ export const LINK_GROUP_1 = {
             featured: true,
             featuredText: "How long can this text actually be",  
             pinned: false,
-        }
+        },
+        {
+            name: "True Internal Link",
+            link: "https://unitedmasters.com/m/5e99d519a2ca6d196513ca76",
+            internal: true,
+            featured: false,
+            featuredText: "How long can this text actually be",  
+            pinned: false,
+        },
     ]
 }
 export const LINK_GROUP_2 = {
@@ -78,6 +90,14 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "", 
             pinned: false,
-        }
+        },
+        {
+            name: "Sound Cloud",
+            link: "https://soundcloud.com",
+            internal: false,
+            featured: false,
+            featuredText: "", 
+            pinned: false,
+        },
     ]
 }
