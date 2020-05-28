@@ -16,7 +16,7 @@ const Links = (props) => {
     // isInternalLink(props.link )
     console.log(props.deviceSize)
     return <div>
-    {props.internal 
+    {props.link.internal 
     ? 
     <Segment color='green' >
         <InternalLinks link={props.link} deviceSize={props.deviceSize}/> 
