@@ -2,14 +2,21 @@ import React from 'react'
 import { Header, Grid } from 'semantic-ui-react'
 import { TITLE } from '../../../constants'
 import SocialLinks from '../SocialLinks/SocialLinks'
+import ProfilePic from '../ProfilePic/ProfilePic'
 
-const Profile = () => (
+
+const Profile = (props) => (
     <div>
         <Header as='h1' textAlign='center'>
             {TITLE}
             <Grid textAlign='center'>
                 <Grid.Row>
-                    <SocialLinks />
+                    <SocialLinks links={props.links}/>
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column>
+                        <ProfilePic />
+                    </Grid.Column>
                 </Grid.Row>
             </Grid>
         </Header>

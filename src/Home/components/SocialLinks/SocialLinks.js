@@ -1,12 +1,15 @@
 import React from 'react'
-import { Icon } from 'semantic-ui-react'
+import SocialLink from '../SocialLink/SocialLink'
 
-const SocialLinks = () => (
+const SocialLinks = (props) => (
     <div>
-       <a href="https://instagram.com"><Icon name='instagram' /></a>
-       <a href="https://twitter.com"><Icon name='twitter' link /></a>
-       <a href="https://facebook.com"><Icon name='facebook f' link /></a>
-       <a href="https://soundcloud.com"><Icon name='soundcloud' link /></a>
+        {props.links.group.map(element => {
+            return <SocialLink link={element}/>
+        })}
+       {/* <a href="https://instagram.com"><Icon name='instagram' color="black" /></a>
+       <a href="https://twitter.com"><Icon name='twitter' color="black" /></a>
+       <a href="https://facebook.com"><Icon name='facebook f' color="black" /></a>
+       <a href="https://soundcloud.com"><Icon name='soundcloud' color="black" /></a> */}
     </div>
 )
 
