@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Header, Image, Modal, Label } from 'semantic-ui-react'
+import { Label } from 'semantic-ui-react'
+import LinksModal from '../LinksModal/LinksModal'
 import '../Links/Links.css'
 
 const ModalModalExample = (props) => {
@@ -11,37 +12,10 @@ const ModalModalExample = (props) => {
       <Label as='a' color='green' ribbon className={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}>
               {props.link.featuredText}
       </Label>
-      
-      <Modal trigger={<Button fluid>{props.link.name}</Button>}>
-      <Modal.Header>Select a Photo</Modal.Header>
-      <Modal.Content image>
-        <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-        <Modal.Description>
-          <Header>Default Profile Image</Header>
-          <p>
-            We've found the following gravatar image associated with your e-mail
-            address.
-          </p>
-          <p>Is it okay to use this photo?</p>
-        </Modal.Description>
-      </Modal.Content>
-    </Modal>
+      <LinksModal links={props.link}/>
   </div>
   :
-    <Modal trigger={<Button fluid>{props.link.name}</Button>}>
-      <Modal.Header>Select a Photo</Modal.Header>
-      <Modal.Content image>
-        <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-        <Modal.Description>
-          <Header>Default Profile Image</Header>
-          <p>
-            We've found the following gravatar image associated with your e-mail
-            address.
-          </p>
-          <p>Is it okay to use this photo?</p>
-        </Modal.Description>
-      </Modal.Content>
-    </Modal>
+      <LinksModal links={props.link}/>
   }
 </div>
 }
