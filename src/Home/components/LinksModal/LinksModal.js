@@ -1,10 +1,11 @@
 import React from 'react'
 import {Modal, Header, Button, Image} from 'semantic-ui-react'
+import ModalHeader from '../ModalHeader/ModalHeader'
 
 const LinksModal = (props) => {
     return <div>
               <Modal trigger={<Button fluid>{props.links.name}</Button>} closeIcon>
-                <Modal.Header>Select a Photo</Modal.Header>
+                <ModalHeader data={props.links}/>
                 <Modal.Content image>
                     <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
                     <Modal.Description>
