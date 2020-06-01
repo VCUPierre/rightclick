@@ -1,22 +1,17 @@
 import React from 'react'
-import {Modal, Header, Button, Image} from 'semantic-ui-react'
+import { Modal, Button, ModalContent } from 'semantic-ui-react'
 import ModalHeader from '../ModalHeader/ModalHeader'
+import ModalMedia from '../ModalMedia/ModalMedia'
+import ExternalLinks from '../ExternalLinks/ExternalLinks'
 
 const LinksModal = (props) => {
     return <div>
               <Modal trigger={<Button fluid>{props.links.name}</Button>} closeIcon>
                 <ModalHeader data={props.links}/>
-                <Modal.Content image>
-                    <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-                    <Modal.Description>
-                    <Header>Default Profile Image</Header>
-                    <p>
-                        We've found the following gravatar image associated with your e-mail
-                        address.
-                    </p>
-                    <p>Is it okay to use this photo?</p>
-                    </Modal.Description>
-                </Modal.Content>
+                <ModalContent image className='RCCenter'>
+                    <ModalMedia />
+                    <ExternalLinks />
+                </ModalContent>
               </Modal>
     </div>
 }
