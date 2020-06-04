@@ -30,6 +30,7 @@ export const LINK_GROUP_1 = {
             featured: true,
             featuredText: "New",
             pinned: false,
+            additionalLinks: [],
         },
         {
             name: "For No Reason",
@@ -38,6 +39,25 @@ export const LINK_GROUP_1 = {
             featured: false,
             featuredText: "", 
             pinned: true,
+            additionalLinks: [
+                {
+                    name: 'Tidal',
+                    Link: 'https://tidal.com'
+                },
+                {
+                    name: 'Spotify',
+                    Link: 'https://spotify.com'
+                },                {
+                    name: 'Apple Music',
+                    Link: 'https://applemusic.com'
+                },                {
+                    name: 'Sound Cloud',
+                    Link: 'https://soundcloud.com'
+                },                {
+                    name: 'Youtube',
+                    Link: 'https://youtube.com'
+                },
+            ],
         },
         {
             name: "4am in Richmond",
@@ -46,6 +66,7 @@ export const LINK_GROUP_1 = {
             featured: true,
             featuredText: "How long can this text actually be",  
             pinned: false,
+            additionalLinks: [],
         },
         {
             name: "True Internal Link",
@@ -54,6 +75,25 @@ export const LINK_GROUP_1 = {
             featured: false,
             featuredText: "How long can this text actually be",  
             pinned: false,
+            additionalLinks: [
+                {
+                    name: 'Tidal',
+                    Link: 'https://tidal.com'
+                },
+                {
+                    name: 'Spotify',
+                    Link: 'https://spotify.com'
+                },                {
+                    name: 'Apple Music',
+                    Link: 'https://applemusic.com'
+                },                {
+                    name: 'Sound Cloud',
+                    Link: 'https://soundcloud.com'
+                },                {
+                    name: 'Youtube',
+                    Link: 'https://youtube.com'
+                },
+            ],
         },
     ]
 }
@@ -65,7 +105,8 @@ export const LINK_GROUP_2 = {
             internal: false,
             featured: false,
             featuredText: "",
-            pinned: true,  
+            pinned: true,
+            additionalLinks: [],  
         },
         {
             name: "YouTube",
@@ -74,6 +115,7 @@ export const LINK_GROUP_2 = {
             featured: true,
             featuredText: "Coming Soon", 
             pinned: false,
+            additionalLinks: [],
         },
         {
             name: "Facebook",
@@ -82,6 +124,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "",
             pinned: false, 
+            additionalLinks: [],
         },
         {
             name: "Twitter",
@@ -90,6 +133,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "", 
             pinned: false,
+            additionalLinks: [],
         },
         {
             name: "Sound Cloud",
@@ -98,6 +142,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "", 
             pinned: false,
+            additionalLinks: [],
         },
     ]
 }
