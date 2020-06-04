@@ -5,7 +5,8 @@ import './ModalLinks.css'
 const ModalLinks = (props) => {
     return <Button 
             as='a' 
-            href={props.link.link}fluid
+            href={props.link.link}
+            fluid
             className="pushoffButtom"
             >
                 {props.link.name}

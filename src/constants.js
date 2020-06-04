@@ -42,20 +42,20 @@ export const LINK_GROUP_1 = {
             additionalLinks: [
                 {
                     name: 'Tidal',
-                    Link: 'https://tidal.com'
+                    link: 'https://tidal.com'
                 },
                 {
                     name: 'Spotify',
-                    Link: 'https://spotify.com'
+                    link: 'https://spotify.com'
                 },                {
                     name: 'Apple Music',
-                    Link: 'https://applemusic.com'
+                    link: 'https://applemusic.com'
                 },                {
                     name: 'Sound Cloud',
-                    Link: 'https://soundcloud.com'
+                    link: 'https://soundcloud.com'
                 },                {
                     name: 'Youtube',
-                    Link: 'https://youtube.com'
+                    link: 'https://youtube.com'
                 },
             ],
         },
@@ -78,20 +78,20 @@ export const LINK_GROUP_1 = {
             additionalLinks: [
                 {
                     name: 'Tidal',
-                    Link: 'https://tidal.com'
+                    link: 'https://tidal.com'
                 },
                 {
                     name: 'Spotify',
-                    Link: 'https://spotify.com'
+                    link: 'https://spotify.com'
                 },                {
                     name: 'Apple Music',
-                    Link: 'https://applemusic.com'
+                    link: 'https://applemusic.com'
                 },                {
                     name: 'Sound Cloud',
-                    Link: 'https://soundcloud.com'
+                    link: 'https://soundcloud.com'
                 },                {
                     name: 'Youtube',
-                    Link: 'https://youtube.com'
+                    link: 'https://youtube.com'
                 },
             ],
         },
