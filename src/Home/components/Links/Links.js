@@ -14,7 +14,6 @@ import './Links.css'
 
 const Links = (props) => {
     // isInternalLink(props.link )
-    console.log(props.deviceSize)
     return <div>
     {props.link.internal 
     ? 

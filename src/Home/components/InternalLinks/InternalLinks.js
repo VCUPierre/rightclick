@@ -4,7 +4,6 @@ import LinksModal from '../LinksModal/LinksModal'
 import '../Links/Links.css'
 
 const ModalModalExample = (props) => {
-  
   return <div>
     {props.link.featured 
     ?
