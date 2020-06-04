@@ -2,11 +2,13 @@ import React from 'react'
 import { Modal, Image } from 'semantic-ui-react'
 import './ModalMedia.css'
 
-const ModalMedia = () => {
+const mediaText = "Hello World"
+
+const ModalMedia = (props) => {
     return <div>
         <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-        <Modal.Description>
-            <h3>Hello World</h3>
+        <Modal.Description className="pushOff-y">
+            <h3>{mediaText}</h3>
         </Modal.Description>
     </div>
 }
