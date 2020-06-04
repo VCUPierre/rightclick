@@ -1,1 +1,0 @@
-# RightClick link react app
