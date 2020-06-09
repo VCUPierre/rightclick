@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal, Image } from 'semantic-ui-react'
 import './ModalMedia.css'
 
-const mediaText = "Hello World"
+const mediaText = "Stream Now"
 
 const ModalMedia = (props) => {
     return <div>
