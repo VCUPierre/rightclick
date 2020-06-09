@@ -16,7 +16,7 @@ export const SOCIAL_LINKS = {
         name: "Twitter",
         iconName: "twitter",
         link: "https://twitter.com",
-        color: "green",
+        color: "black",
     },
     {
         name: "Sound Cloud",
@@ -27,6 +27,7 @@ export const SOCIAL_LINKS = {
 ]}
 export const LINK_GROUP_1 = {
     groupName: "Music Links",
+    groupColor: "green",
     group: [{
             name: "Dreams",
             link: "https://unitedmasters.com/m/5ebb11fa6b55ac27c8e9cf67",
@@ -35,6 +36,7 @@ export const LINK_GROUP_1 = {
             featuredText: "New",
             pinned: false,
             additionalLinks: [],
+            color: "black",
         },
         {
             name: "For No Reason",
@@ -62,6 +64,7 @@ export const LINK_GROUP_1 = {
                     link: 'https://youtube.com'
                 },
             ],
+            color: "black",
         },
         {
             name: "4am in Richmond",
@@ -71,6 +74,7 @@ export const LINK_GROUP_1 = {
             featuredText: "How long can this text actually be",  
             pinned: false,
             additionalLinks: [],
+            color: "red",
         },
         {
             name: "True Internal Link",
@@ -98,11 +102,13 @@ export const LINK_GROUP_1 = {
                     link: 'https://youtube.com'
                 },
             ],
+            color: "black",
         },
     ]
 }
 export const LINK_GROUP_2 = {
     groupName: "Other Links",
+    groupColor: "orange",
     group: [{
             name: "Instagram",
             link: "https://www.instagram.com",
@@ -111,6 +117,7 @@ export const LINK_GROUP_2 = {
             featuredText: "",
             pinned: true,
             additionalLinks: [],  
+            color: "black",
         },
         {
             name: "YouTube",
@@ -120,6 +127,7 @@ export const LINK_GROUP_2 = {
             featuredText: "Coming Soon", 
             pinned: false,
             additionalLinks: [],
+            color: "green",
         },
         {
             name: "Facebook",
@@ -129,6 +137,7 @@ export const LINK_GROUP_2 = {
             featuredText: "",
             pinned: false, 
             additionalLinks: [],
+            color: "black",
         },
         {
             name: "Twitter",
@@ -138,6 +147,7 @@ export const LINK_GROUP_2 = {
             featuredText: "", 
             pinned: false,
             additionalLinks: [],
+            color: "black",
         },
         {
             name: "Sound Cloud",
@@ -147,6 +157,7 @@ export const LINK_GROUP_2 = {
             featuredText: "", 
             pinned: false,
             additionalLinks: [],
+            color: "black",
         },
     ]
 }
