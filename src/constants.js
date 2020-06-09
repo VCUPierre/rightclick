@@ -3,22 +3,26 @@ export const SOCIAL_LINKS = {
     group: [{
         name: "Instagram",
         iconName: "instagram",
-        link: "https://instagram.com"
+        link: "https://instagram.com",
+        color: "black",
     },
     {
         name: "Facebook",
         iconName: "facebook f",
-        link: "https://facebook.com"
+        link: "https://facebook.com",
+        color: "black",
     },
     {
         name: "Twitter",
         iconName: "twitter",
-        link: "https://twitter.com"
+        link: "https://twitter.com",
+        color: "green",
     },
     {
         name: "Sound Cloud",
         iconName: "soundcloud",
-        link: "https://soundcloud.com"
+        link: "https://soundcloud.com",
+        color: "black",
     },
 ]}
 export const LINK_GROUP_1 = {
