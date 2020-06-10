@@ -1,14 +1,21 @@
 import React from 'react'
 import { Modal, Image } from 'semantic-ui-react'
+import ReactPlayer from 'react-player'
 import './ModalMedia.css'
 
-const mediaText = "Stream Now"
+function whichMedia(type, link) {
+    if (type === "still"){
+        return <Image wrapped size='medium' src={link} />
+    }
+    return <ReactPlayer url={link} />
+} 
 
 const ModalMedia = (props) => {
+    console.log("modalMedia-", props.link)
     return <div>
-        <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
+        {whichMedia(props.link.mainMedia.type, props.link.mainMedia.link)}
         <Modal.Description className="pushOff-y">
-            <h3>{mediaText}</h3>
+            <h3>{props.link.mainMedia.mediaText}</h3>
         </Modal.Description>
     </div>
 }

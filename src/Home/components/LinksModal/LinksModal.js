@@ -13,7 +13,7 @@ const LinksModal = (props) => {
                     </Grid.Column>
                     <Grid.Row>
                         <Modal.Content image className='RCCenter'>
-                            <ModalMedia />
+                            <ModalMedia link={props.links} />
                             {props.links.additionalLinks ? props.links.additionalLinks.map(element => {
                                 return <ModalLinks link={element} />
                             })
@@ -23,16 +23,6 @@ const LinksModal = (props) => {
                         </Modal.Content>
                     </Grid.Row>
                 </Grid>
-                
-                {/* <Modal.Content image className='RCCenter'>
-                    <ModalMedia />
-                    {props.links.additionalLinks ? props.links.additionalLinks.map(element => {
-                        return <ModalLinks link={element} />
-                    })
-                    : 
-                    " "
-                    }
-                </Modal.Content> */}
               </Modal>
     </div>
 }

@@ -35,6 +35,11 @@ export const LINK_GROUP_1 = {
             featured: true,
             featuredText: "New",
             pinned: false,
+            mainMedia: {
+                type: "still",
+                link: "https://res.cloudinary.com/dojfxskva/image/upload/v1591759506/p2pRich/dreams_kxxt8u.jpg",
+                mediaText: "Stream Now",
+            },
             additionalLinks: [],
             color: "black",
         },
@@ -45,6 +50,11 @@ export const LINK_GROUP_1 = {
             featured: false,
             featuredText: "", 
             pinned: true,
+            mainMedia: {
+                type: "media",
+                link: "https://soundcloud.com/p2prixh/for-no-reason",
+                mediaText: "Stream Now",
+            },
             additionalLinks: [
                 {
                     name: 'Tidal',
@@ -73,6 +83,11 @@ export const LINK_GROUP_1 = {
             featured: true,
             featuredText: "How long can this text actually be",  
             pinned: false,
+            mainMedia: {
+                type: "media",
+                link: "https://soundcloud.com/p2prixh/4am-in-richmond-freestyle",
+                mediaText: "Stream Now",
+            },
             additionalLinks: [],
             color: "red",
         },
@@ -83,6 +98,11 @@ export const LINK_GROUP_1 = {
             featured: false,
             featuredText: "How long can this text actually be",  
             pinned: false,
+            mainMedia: {
+                type: "media",
+                link: "https://www.youtube.com/watch?v=UfQHEpf2q8k",
+                mediaText: "Stream Now",
+            },
             additionalLinks: [
                 {
                     name: 'Tidal',
@@ -116,6 +136,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "",
             pinned: true,
+            mainMedia: {},
             additionalLinks: [],  
             color: "black",
         },
@@ -126,6 +147,7 @@ export const LINK_GROUP_2 = {
             featured: true,
             featuredText: "Coming Soon", 
             pinned: false,
+            mainMedia: {},
             additionalLinks: [],
             color: "green",
         },
@@ -136,6 +158,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "",
             pinned: false, 
+            mainMedia: {},
             additionalLinks: [],
             color: "black",
         },
@@ -146,6 +169,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "", 
             pinned: false,
+            mainMedia: {},
             additionalLinks: [],
             color: "black",
         },
@@ -156,6 +180,7 @@ export const LINK_GROUP_2 = {
             featured: false,
             featuredText: "", 
             pinned: false,
+            mainMedia: {},
             additionalLinks: [],
             color: "black",
         },
