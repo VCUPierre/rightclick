@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Label } from 'semantic-ui-react'
 import '../Links/Links.css'
+import './button.css'
 
 const ExternalLinks = (props) => {
     return <div>
@@ -12,7 +13,8 @@ const ExternalLinks = (props) => {
             </Label>
             <Button 
             as='a' 
-            href={props.link.link} 
+            href={props.link.link}
+            className='RCWhiteBG' 
             fluid>
                 {props.link.name}
             </Button>
@@ -20,7 +22,8 @@ const ExternalLinks = (props) => {
         :     
         <Button 
         as='a' 
-        href={props.link.link} 
+        href={props.link.link}
+        className='RCWhiteBG' 
         fluid>
             {props.link.name}
         </Button>
