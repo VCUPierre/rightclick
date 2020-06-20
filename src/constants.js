@@ -1,4 +1,5 @@
-export const TITLE = "Something"
+export const TITLE = "P2P Rixh"
+export const PROFILE_PIC = "https://res.cloudinary.com/rightlink/image/upload/v1592673758/p2pRich/Profile1_hohiq3.jpg"
 export const SOCIAL_LINKS = {
     group: [{
         name: "Instagram",
@@ -37,7 +38,7 @@ export const LINK_GROUP_1 = {
             pinned: false,
             mainMedia: {
                 type: "still",
-                link: "https://res.cloudinary.com/dojfxskva/image/upload/v1591759506/p2pRich/dreams_kxxt8u.jpg",
+                link: "https://res.cloudinary.com/rightlink/image/upload/v1591759506/p2pRich/dreams_kxxt8u.jpg",
                 mediaText: "Stream Now",
             },
             additionalLinks: [],

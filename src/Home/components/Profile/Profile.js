@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header, Grid } from 'semantic-ui-react'
-import { TITLE } from '../../../constants'
+import { TITLE , PROFILE_PIC} from '../../../constants'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import ProfilePic from '../ProfilePic/ProfilePic'
 
@@ -14,8 +14,8 @@ const Profile = (props) => (
                     <SocialLinks links={props.links}/>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column>
-                        <ProfilePic />
+                    <Grid.Column textAlign='center'>
+                        <ProfilePic src={PROFILE_PIC}/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
