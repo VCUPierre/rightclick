@@ -8,7 +8,7 @@ const ModalModalExample = (props) => {
     {props.link.featured 
     ?
     <div>
-      <Label as='a' color={props.link.color} ribbon className={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}>
+      <Label as='a' color={props.link.color} ribbon={props.link.bannerSide} className={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}>
               {props.link.featuredText}
       </Label>
       <LinksModal links={props.link}/>

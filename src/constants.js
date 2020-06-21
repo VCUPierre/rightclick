@@ -43,6 +43,7 @@ export const LINK_GROUP_1 = {
             },
             additionalLinks: [],
             color: "black",
+            bannerSide: "left",
         },
         {
             name: "For No Reason",
@@ -76,6 +77,7 @@ export const LINK_GROUP_1 = {
                 },
             ],
             color: "black",
+            bannerSide: "left",
         },
         {
             name: "4am in Richmond",
@@ -91,6 +93,7 @@ export const LINK_GROUP_1 = {
             },
             additionalLinks: [],
             color: "red",
+            bannerSide: "left",
         },
         {
             name: "True Internal Link",
@@ -124,6 +127,7 @@ export const LINK_GROUP_1 = {
                 },
             ],
             color: "black",
+            bannerSide: "left",
         },
     ]
 }
@@ -140,6 +144,7 @@ export const LINK_GROUP_2 = {
             mainMedia: {},
             additionalLinks: [],  
             color: "black",
+            bannerSide: "left",
         },
         {
             name: "YouTube",
@@ -151,6 +156,7 @@ export const LINK_GROUP_2 = {
             mainMedia: {},
             additionalLinks: [],
             color: "green",
+            bannerSide: "left",
         },
         {
             name: "Facebook",
@@ -162,6 +168,7 @@ export const LINK_GROUP_2 = {
             mainMedia: {},
             additionalLinks: [],
             color: "black",
+            bannerSide: "left",
         },
         {
             name: "Twitter",
@@ -173,6 +180,7 @@ export const LINK_GROUP_2 = {
             mainMedia: {},
             additionalLinks: [],
             color: "black",
+            bannerSide: "left",
         },
         {
             name: "Sound Cloud",
@@ -184,6 +192,7 @@ export const LINK_GROUP_2 = {
             mainMedia: {},
             additionalLinks: [],
             color: "black",
+            bannerSide: "left",
         },
     ]
 }
