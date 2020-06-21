@@ -3,7 +3,7 @@ import { Header, Grid } from 'semantic-ui-react'
 import { TITLE , PROFILE_PIC} from '../../../constants'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import ProfilePic from '../ProfilePic/ProfilePic'
-
+import './profile.css'
 
 const Profile = (props) => (
     <div>
@@ -13,7 +13,7 @@ const Profile = (props) => (
                 <Grid.Row>
                     <SocialLinks links={props.links}/>
                 </Grid.Row>
-                <Grid.Row>
+                <Grid.Row className='RCNoTopPadding'>
                     <Grid.Column textAlign='center'>
                         <ProfilePic src={PROFILE_PIC}/>
                     </Grid.Column>
