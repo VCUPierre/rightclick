@@ -17,11 +17,11 @@ const Links = (props) => {
     return <div>
     {props.link.internal 
     ? 
-    <Segment color={props.link.color} >
+    <Segment color={props.link.color} raised className='pushDown'>
         <InternalLinks link={props.link} deviceSize={props.deviceSize}/> 
     </Segment>
     : 
-    <Segment color={props.link.color} >
+    <Segment color={props.link.color} /*raised className='pushDown'*/>
         <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
     </Segment>}
 </div>
