@@ -14,7 +14,8 @@ const ExternalLinks = (props) => {
             <Button 
             as='a' 
             href={props.link.link}
-            className='RCWhiteBG' 
+            className='RCWhiteBG RCPadding'
+            size='big' 
             fluid>
                 {props.link.name}
             </Button>
@@ -23,7 +24,8 @@ const ExternalLinks = (props) => {
         <Button 
         as='a' 
         href={props.link.link}
-        className='RCWhiteBG' 
+        className='RCWhiteBG RCPadding'
+        size='big' 
         fluid>
             {props.link.name}
         </Button>

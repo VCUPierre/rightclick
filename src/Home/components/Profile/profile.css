@@ -1,3 +1,6 @@
 .RCNoTopPadding {
     padding-top: 0 !important;
 }
+.RCTopPadding {
+    padding-top: 15px !important;
+}

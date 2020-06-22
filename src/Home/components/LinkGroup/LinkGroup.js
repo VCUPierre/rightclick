@@ -5,7 +5,7 @@ import "./LinkGroup.css"
 
 const LinkGroup = (props) => (
     <div className="stretched">
-        <Header>{props.links.groupName}</Header>
+        <Header as='h2'>{props.links.groupName}</Header>
         <Segment.Group raised>
             {props.links.group.map(element => {
                 return <Links link={element} deviceSize={props.deviceSize}/>

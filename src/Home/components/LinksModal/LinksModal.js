@@ -7,7 +7,7 @@ import './button.css'
 
 const LinksModal = (props) => {
     return <div>
-              <Modal trigger={<Button fluid className='RCWhiteBG'>{props.links.name}</Button>} closeIcon>
+              <Modal trigger={<Button fluid size='big' className='RCWhiteBG RCPadding'>{props.links.name}</Button>} closeIcon>
                 <Grid centered columns={2} >
                     <Grid.Column className="RCTitleFix">
                         <ModalHeader data={props.links} />

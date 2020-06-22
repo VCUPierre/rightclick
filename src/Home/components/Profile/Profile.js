@@ -7,7 +7,7 @@ import './profile.css'
 
 const Profile = (props) => (
     <div>
-        <Header as='h1' textAlign='center'>
+        <Header as='h1' textAlign='center' className='RCTopPadding'>
             {TITLE}
             <Grid textAlign='center'>
                 <Grid.Row>
