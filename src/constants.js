@@ -41,7 +41,19 @@ export const LINK_GROUP_1 = {
                 link: "https://res.cloudinary.com/rightlink/image/upload/v1591759506/p2pRich/dreams_kxxt8u.jpg",
                 mediaText: "Stream Now",
             },
-            additionalLinks: [],
+            additionalLinks: [
+                {
+                    name: 'Tidal',
+                    link: 'https://tidal.com'
+                },
+                {
+                    name: 'Spotify',
+                    link: 'https://spotify.com'
+                },                {
+                    name: 'Apple Music',
+                    link: 'https://applemusic.com'
+                },          
+            ],
             color: "black",
             bannerSide: "left",
         },
@@ -91,7 +103,12 @@ export const LINK_GROUP_1 = {
                 link: "https://soundcloud.com/p2prixh/4am-in-richmond-freestyle",
                 mediaText: "Stream Now",
             },
-            additionalLinks: [],
+            additionalLinks: [
+                {
+                    name: 'Sound Cloud',
+                    link: 'https://soundcloud.com'
+                },
+            ],
             color: "red",
             bannerSide: "left",
         },
@@ -179,7 +196,7 @@ export const LINK_GROUP_2 = {
             pinned: false,
             mainMedia: {},
             additionalLinks: [],
-            color: "black",
+            color: "blue",
             bannerSide: "left",
         },
         {
