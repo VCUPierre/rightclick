@@ -7,7 +7,7 @@ function whichMedia(type, link) {
     if (type === "still"){
         return <Image wrapped size='medium' src={link} />
     }
-    return <ReactPlayer url={link} />
+    return <ReactPlayer url={link} width='100%' height='100%' />
 } 
 
 const ModalMedia = (props) => {
