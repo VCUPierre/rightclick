@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Label } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+import Banner from '../Banner/Banner'
 import '../Links/Links.css'
 import './button.css'
 
@@ -8,9 +9,14 @@ const ExternalLinks = (props) => {
         {props.link.featured 
         ?
         <div>
-            <Label as='a' color={props.link.color} ribbon={props.link.bannerSide} className={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}>
-              {props.link.featuredText}
-            </Label>
+            <Banner 
+                text={props.link.featuredText} 
+                color={props.link.color} 
+                bannerSide={props.link.bannerSide} 
+                deviceSize={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"} 
+                timer={props.link.featuredTimerDate}
+                completeText={props.link.featuredTimerText}
+            />
             <Button 
             as='a' 
             href={props.link.link}
