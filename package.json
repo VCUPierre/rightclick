@@ -12,6 +12,7 @@
     "pluralize": "^8.0.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "react-countdown": "^2.2.1",
     "react-dom": "^16.13.1",
     "react-media-hook": "^0.4.7",
     "react-player": "^2.2.0",
