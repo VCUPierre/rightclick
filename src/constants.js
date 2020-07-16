@@ -26,7 +26,7 @@ export const SOCIAL_LINKS = {
         color: "black",
     },
 ]}
-// featuredTimerDate formats inclued '2020-02-01T01:02:03' or milliseconds e.g 1580518923000
+// featuredTimerDate formats inclued '2020-02-01T01:02:03' or milliseconds e.g 1580518923000 - documentation here https://github.com/ndresx/react-countdown
 export const LINK_GROUP_1 = {
     groupName: "Music Links",
     groupColor: "green",
@@ -47,14 +47,14 @@ export const LINK_GROUP_1 = {
             additionalLinks: [
                 {
                     name: 'Tidal',
-                    link: 'https://tidal.com'
+                    link: 'https://tidal.com/browse/track/141418149'
                 },
                 {
                     name: 'Spotify',
-                    link: 'https://spotify.com'
+                    link: 'https://open.spotify.com/track/1nLAyoBSRe65iUcntzVNZm?si=Y7AtFXYjTkq4RpxZuaj7lQ'
                 },                {
                     name: 'Apple Music',
-                    link: 'https://applemusic.com'
+                    link: 'https://music.apple.com/us/album/dreams/1513044862?i=1513044863'
                 },          
             ],
             color: "black",
@@ -77,20 +77,14 @@ export const LINK_GROUP_1 = {
             additionalLinks: [
                 {
                     name: 'Tidal',
-                    link: 'https://tidal.com'
+                    link: 'https://tidal.com/browse/track/139863571'
                 },
                 {
                     name: 'Spotify',
-                    link: 'https://spotify.com'
+                    link: 'https://open.spotify.com/track/1V2tDuges6H1HdhxL1svPZ?si=o2E-fzMdSh2mnzCmWwGurg'
                 },                {
                     name: 'Apple Music',
-                    link: 'https://applemusic.com'
-                },                {
-                    name: 'Sound Cloud',
-                    link: 'https://soundcloud.com'
-                },                {
-                    name: 'Youtube',
-                    link: 'https://youtube.com'
+                    link: 'https://music.apple.com/us/album/for-no-reason/1511178948?i=1511178949'
                 },
             ],
             color: "black",
@@ -112,9 +106,17 @@ export const LINK_GROUP_1 = {
             },
             additionalLinks: [
                 {
-                    name: 'Sound Cloud',
-                    link: 'https://soundcloud.com'
+                    name: 'Tidal',
+                    link: 'https://tidal.com/browse/track/137944614'
                 },
+                {
+                    name: 'Spotify',
+                    link: 'https://open.spotify.com/track/0YJwEIteHZvwq5pm2KNm6G?si=pponcmjgTga2qBQTfLgWBw'
+                },
+                {
+                    name: 'Apple Music',
+                    link: 'https://music.apple.com/us/album/4am-in-richmond/1508644950?i=1508644951'
+                }
             ],
             color: "red",
             bannerSide: "left",
