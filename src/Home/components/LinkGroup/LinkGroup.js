@@ -5,8 +5,13 @@ import "./LinkGroup.css"
 
 const LinkGroup = (props) => (
     <div className="stretched">
-        <Header as='h2'>{props.links.groupName}</Header>
-        <div>
+        <Header as='h2'>
+            <span>
+                {props.links.groupName}
+            </span>
+        </Header>
+        
+        <div >
             {props.links.group.map(element => {
                 return <Links link={element} deviceSize={props.deviceSize}/>
             })}

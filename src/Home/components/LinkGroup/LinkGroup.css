@@ -1,3 +1,8 @@
 .stretched {
     width: 65%;
 }
+
+h2 span { 
+    color: black; 
+    text-shadow: 2px 2px 2px #ffffff
+}

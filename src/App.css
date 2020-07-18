@@ -1,7 +1,7 @@
 .backgroundImg{
   background-image: url(https://res.cloudinary.com/rightlink/image/upload/v1594868601/p2pRich/logo_vcg55z.png);
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: 50% 60%;
   background-attachment: fixed;
-  background-size: 110px 110px;
+  background-size: contain;
 }
