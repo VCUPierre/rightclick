@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header, Grid } from 'semantic-ui-react'
-import { TITLE , PROFILE_PIC} from '../../../constants'
+import { TITLE , PROFILE_PIC} from '../../../assets/constants'
+// import { TITLE , PROFILE_PIC} from '../../../assets/data'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import ProfilePic from '../ProfilePic/ProfilePic'
 import './profile.css'
