@@ -1,3 +1,8 @@
-.RCFixCenter {
+.RLFixCenter {
     display: inline !important;
+}
+.RLOneSize {
+    height: 400px !important;
+    width: auto !important;
+    object-fit: contain !important;
 }
