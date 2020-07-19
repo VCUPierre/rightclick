@@ -3,7 +3,7 @@ export const PROFILE_PIC = "https://res.cloudinary.com/rightlink/image/upload/v1
 export const BACKGROUND = {
     image: true,
     imageLink: 'https://res.cloudinary.com/rightlink/image/upload/v1594868601/p2pRich/logo_vcg55z.png',
-    color: 'grey',
+    color: 'white',
 }
 export const SOCIAL_LINKS = {
     group: [{
