@@ -5,13 +5,15 @@ import '../Links/Links.css'
 import './button.css'
 
 const ExternalLinks = (props) => {
+    const coloredButton = props.link.buttonColor;
+
     return <div>
         {props.link.featured 
         ?
         <div>
             <Banner 
                 text={props.link.featuredText} 
-                color={props.link.color} 
+                color={props.link.featuredColor} 
                 bannerSide={props.link.bannerSide} 
                 deviceSize={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"} 
                 timer={props.link.featuredTimerDate}
@@ -20,7 +22,8 @@ const ExternalLinks = (props) => {
             <Button 
             as='a' 
             href={props.link.link}
-            className='RCWhiteBG RCPadding'
+            {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
+            color={props.link.buttonColor} 
             size='big' 
             fluid>
                 {props.link.name}
@@ -30,7 +33,8 @@ const ExternalLinks = (props) => {
         <Button 
         as='a' 
         href={props.link.link}
-        className='RCWhiteBG RCPadding'
+        {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
+        color={props.link.buttonColor} 
         size='big' 
         fluid>
             {props.link.name}

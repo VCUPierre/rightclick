@@ -1,6 +1,7 @@
 import React from 'react'
 import InternalLinks from '../InternalLinks/InternalLinks'
 import ExternalLinks from '../ExternalLinks/ExternalLinks'
+import ItemLinks from '../ItemLinks/ItemLinks'
 import { Segment } from 'semantic-ui-react'
 import './Links.css'
 
@@ -14,17 +15,25 @@ import './Links.css'
 
 const Links = (props) => {
     let spaced = props.link.linkSpaced;
+    let colored = props.link.colored;
 
     return <div>
-    {props.link.internal 
+    {props.link.type === "internal" 
     ? 
-    <Segment color={props.link.color} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
+    <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
         <InternalLinks link={props.link} deviceSize={props.deviceSize}/> 
     </Segment>
     : 
-    <Segment color={props.link.color} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
-        <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
-    </Segment>}
+    props.link.type === "item" 
+        ?
+        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
+            <ItemLinks link={props.link} deviceSize={props.deviceSize}/>
+        </Segment>
+        :
+        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
+            <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
+        </Segment>
+    }
 </div>
 }
 

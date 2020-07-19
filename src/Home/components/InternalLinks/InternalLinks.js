@@ -3,14 +3,14 @@ import LinksModal from '../LinksModal/LinksModal'
 import Banner from '../Banner/Banner'
 import '../Links/Links.css'
 
-const ModalModalExample = (props) => {
+const InternalLinks = (props) => {
   return <div>
     {props.link.featured 
     ?
     <div>
       <Banner 
         text={props.link.featuredText} 
-        color={props.link.color} 
+        color={props.link.featuredColor} 
         bannerSide={props.link.bannerSide} 
         deviceSize={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}
         timer={props.link.featuredTimerDate}
@@ -24,4 +24,4 @@ const ModalModalExample = (props) => {
 </div>
 }
 
-export default ModalModalExample
+export default InternalLinks
