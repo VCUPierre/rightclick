@@ -2,5 +2,8 @@
     padding-top: 0 !important;
 }
 .RCTopPadding {
-    padding-top: 10px !important;
+    padding-top: 15px !important;
+}
+.RCSpace-5 {
+    padding-top: 5px !important;
 }

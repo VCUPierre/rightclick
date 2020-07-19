@@ -2,7 +2,9 @@ import React from 'react';
 import Home from './Home/components/Home'
 import { useMediaPredicate } from "react-media-hook";
 import {createUseStyles} from 'react-jss'
-import { BACKGROUND } from './assets/constants'
+// import { BACKGROUND } from './assets/constants'
+import  { BACKGROUND } from './assets/data'
+
 
 const useStyles = createUseStyles({
   backgroundImg: {
