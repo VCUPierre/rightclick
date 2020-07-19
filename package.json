@@ -1,5 +1,5 @@
 {
-  "homepage": "http://vcupierre.github.io/rightclick",
+  "homepage": "http://right-link.com/P2PRixh",
   "name": "rightclick",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +14,7 @@
     "react": "^16.13.1",
     "react-countdown": "^2.2.1",
     "react-dom": "^16.13.1",
+    "react-jss": "^10.3.0",
     "react-media-hook": "^0.4.7",
     "react-player": "^2.2.0",
     "react-scripts": "3.4.1",
