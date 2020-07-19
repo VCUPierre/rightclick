@@ -33,6 +33,7 @@ export const LINK_GROUP_1 = {
     group: [{
             name: "Dreams",
             link: "https://unitedmasters.com/m/5ebb11fa6b55ac27c8e9cf67",
+            linkSpaced: true,
             internal: true,
             featured: true,
             featuredText: "New",
@@ -63,6 +64,7 @@ export const LINK_GROUP_1 = {
         {
             name: "For No Reason",
             link: "https://unitedmasters.com/m/5ea05efe09cf41331487e756",
+            linkSpaced: true,
             internal: true,
             featured: false,
             featuredText: "", 
@@ -93,6 +95,7 @@ export const LINK_GROUP_1 = {
         {
             name: "4am in Richmond",
             link: "https://unitedmasters.com/m/5e99d519a2ca6d196513ca76",
+            linkSpaced: true,
             internal: true,
             featured: true,
             featuredText: "Video droping in ",
@@ -124,6 +127,7 @@ export const LINK_GROUP_1 = {
         {
             name: "True Internal Link",
             link: "https://unitedmasters.com/m/5e99d519a2ca6d196513ca76",
+            linkSpaced: true,
             internal: true,
             featured: false,
             featuredText: "", 
@@ -165,6 +169,7 @@ export const LINK_GROUP_2 = {
     group: [{
             name: "Instagram",
             link: "https://www.instagram.com",
+            linkSpaced: true,
             internal: false,
             featured: false,
             featuredText: "",
@@ -179,6 +184,7 @@ export const LINK_GROUP_2 = {
         {
             name: "YouTube",
             link: "https://www.youtube.com",
+            linkSpaced: true,
             internal: false,
             featured: true,
             featuredText: "Coming Soon",
@@ -193,6 +199,7 @@ export const LINK_GROUP_2 = {
         {
             name: "Facebook",
             link: "https://www.facebook.com",
+            linkSpaced: false,
             internal: false,
             featured: false,
             featuredText: "",
@@ -207,6 +214,7 @@ export const LINK_GROUP_2 = {
         {
             name: "Twitter",
             link: "https://www.twitter.com",
+            linkSpaced: false,
             internal: false,
             featured: false,
             featuredText: "",
@@ -221,6 +229,7 @@ export const LINK_GROUP_2 = {
         {
             name: "Sound Cloud",
             link: "https://soundcloud.com",
+            linkSpaced: true,
             internal: false,
             featured: false,
             featuredText: "",

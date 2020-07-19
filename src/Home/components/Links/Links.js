@@ -13,15 +13,16 @@ import './Links.css'
 // }
 
 const Links = (props) => {
-    // isInternalLink(props.link )
+    let spaced = props.link.linkSpaced;
+
     return <div>
     {props.link.internal 
     ? 
-    <Segment color={props.link.color} raised className='pushDown'>
+    <Segment color={props.link.color} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
         <InternalLinks link={props.link} deviceSize={props.deviceSize}/> 
     </Segment>
     : 
-    <Segment color={props.link.color} /*raised className='pushDown'*/>
+    <Segment color={props.link.color} {...(spaced ? {raised:true, className: 'pushDown'}: {})}>
         <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
     </Segment>}
 </div>
