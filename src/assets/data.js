@@ -102,7 +102,44 @@ export const LINK_GROUP_1 = {
 export const LINK_GROUP_2 = {
     groupName: "Demo Links",
     groupColor: "red",
-    group: [{
+    group: [
+        {
+            name: "Internal Media",
+            link: "",
+            linkSpaced: true,
+            type: "internal",
+            typeAction: "",
+            internal: true,
+            featured: false,
+            featuredText: "", 
+            featuredTimerDate: "",
+            featuredTimerText: "",
+            featuredColor: "",
+            pinned: true,
+            mainMedia: {
+                type: "media",
+                link: "https://www.youtube.com/watch?v=UfQHEpf2q8k",
+                mediaText: "Great Cover ^^",
+            },
+            additionalLinks: [
+                {
+                    name: 'Tidal',
+                    link: 'https://tidal.com'
+                },
+                {
+                    name: 'Spotify',
+                    link: 'https://open.spotify.com'
+                },                {
+                    name: 'Apple Music',
+                    link: 'https://music.apple.com'
+                },
+            ],
+            color: "black",
+            colored: false,
+            buttonColor: "",
+            bannerSide: "left",
+        },
+        {
             name: "Basic Banner",
             link: "",
             linkSpaced: true,
@@ -144,46 +181,10 @@ export const LINK_GROUP_2 = {
             bannerSide: "left",
         },
         {
-            name: "Internal Media",
-            link: "",
-            linkSpaced: true,
-            type: "internal",
-            typeAction: "",
-            internal: true,
-            featured: false,
-            featuredText: "", 
-            featuredTimerDate: "",
-            featuredTimerText: "",
-            featuredColor: "",
-            pinned: true,
-            mainMedia: {
-                type: "media",
-                link: "https://www.youtube.com/watch?v=UfQHEpf2q8k",
-                mediaText: "Great Cover ^^",
-            },
-            additionalLinks: [
-                {
-                    name: 'Tidal',
-                    link: 'https://tidal.com'
-                },
-                {
-                    name: 'Spotify',
-                    link: 'https://open.spotify.com'
-                },                {
-                    name: 'Apple Music',
-                    link: 'https://music.apple.com'
-                },
-            ],
-            color: "black",
-            colored: false,
-            buttonColor: "",
-            bannerSide: "left",
-        },
-        {
             name: "Countdown Banner",
             link: "https://unitedmasters.com/m/5e99d519a2ca6d196513ca76",
             linkSpaced: true,
-            type: "internal",
+            type: "item",
             typeAction: "",
             internal: true,
             featured: true,
@@ -207,7 +208,7 @@ export const LINK_GROUP_2 = {
             name: "Attached 1 of 2",
             link: "",
             linkSpaced: false,
-            type: "external",
+            type: "item",
             typeAction: "",
             internal: true,
             featured: false,
@@ -245,7 +246,7 @@ export const LINK_GROUP_2 = {
             name: "Attached 2 of 2",
             link: "",
             linkSpaced: true,
-            type: "external",
+            type: "item",
             typeAction: "",
             internal: true,
             featured: false,
@@ -283,7 +284,7 @@ export const LINK_GROUP_2 = {
             name: "Button Color",
             link: "",
             linkSpaced: true,
-            type: "external",
+            type: "item",
             typeAction: "",
             internal: true,
             featured: false,
