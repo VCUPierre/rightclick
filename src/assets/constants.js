@@ -1,5 +1,10 @@
 export const TITLE = "P2P Rixh"
 export const PROFILE_PIC = "https://res.cloudinary.com/rightlink/image/upload/v1592673758/p2pRich/Profile1_hohiq3.jpg"
+export const BACKGROUND = {
+    image: true,
+    imageLink: 'https://res.cloudinary.com/rightlink/image/upload/v1594868601/p2pRich/logo_vcg55z.png',
+    color: 'grey',
+}
 export const SOCIAL_LINKS = {
     group: [{
         name: "Instagram",
