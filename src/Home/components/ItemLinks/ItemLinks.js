@@ -19,8 +19,6 @@ const ItemLinks = (props) => {
                 completeText={props.link.featuredTimerText}
             />
             <Button 
-                as='a' 
-                href={props.link.link}
                 {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
                 size='big'
                 color={props.link.buttonColor}   
@@ -30,8 +28,6 @@ const ItemLinks = (props) => {
     </div>
     :
     <Button 
-        as='a' 
-        href={props.link.link}
         {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
         size='big'
         color={props.link.buttonColor} 
