@@ -2,15 +2,15 @@ import React from 'react';
 import Home from './Home/components/Home'
 import { useMediaPredicate } from "react-media-hook";
 import {createUseStyles} from 'react-jss'
-// import { BACKGROUND } from './assets/constants'
-import  { BACKGROUND } from './assets/data'
+import { BACKGROUND } from './assets/constants'
+// import  { BACKGROUND } from './assets/data'
 
 
 const useStyles = createUseStyles({
   backgroundImg: {
     'background-image': `url(${BACKGROUND.image ? BACKGROUND.imageLink : ""})`,
     'background-repeat': 'no-repeat',
-    'background-position': '50% 45%',
+    'background-position': '50% 95%',
     'background-attachment': 'fixed',
     'background-size': 'contain',
     'background-color': `${BACKGROUND.color}`
