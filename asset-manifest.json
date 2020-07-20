@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/rightclick/static/css/main.e3af6fdd.chunk.css",
-    "main.js": "/rightclick/static/js/main.ec960448.chunk.js",
-    "main.js.map": "/rightclick/static/js/main.ec960448.chunk.js.map",
-    "runtime-main.js": "/rightclick/static/js/runtime-main.971231fc.js",
-    "runtime-main.js.map": "/rightclick/static/js/runtime-main.971231fc.js.map",
-    "static/js/2.02db3caf.chunk.js": "/rightclick/static/js/2.02db3caf.chunk.js",
-    "static/js/2.02db3caf.chunk.js.map": "/rightclick/static/js/2.02db3caf.chunk.js.map",
-    "index.html": "/rightclick/index.html",
-    "precache-manifest.7321426e644b38e9b604e9f374aef26d.js": "/rightclick/precache-manifest.7321426e644b38e9b604e9f374aef26d.js",
-    "service-worker.js": "/rightclick/service-worker.js",
-    "static/css/main.e3af6fdd.chunk.css.map": "/rightclick/static/css/main.e3af6fdd.chunk.css.map",
-    "static/js/2.02db3caf.chunk.js.LICENSE.txt": "/rightclick/static/js/2.02db3caf.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png"
+    "main.css": "/P2PRixh/static/css/main.77e141f4.chunk.css",
+    "main.js": "/P2PRixh/static/js/main.71ff35e4.chunk.js",
+    "main.js.map": "/P2PRixh/static/js/main.71ff35e4.chunk.js.map",
+    "runtime-main.js": "/P2PRixh/static/js/runtime-main.74033cf5.js",
+    "runtime-main.js.map": "/P2PRixh/static/js/runtime-main.74033cf5.js.map",
+    "static/js/2.902094a5.chunk.js": "/P2PRixh/static/js/2.902094a5.chunk.js",
+    "static/js/2.902094a5.chunk.js.map": "/P2PRixh/static/js/2.902094a5.chunk.js.map",
+    "index.html": "/P2PRixh/index.html",
+    "precache-manifest.054fb299ea56f0979c41b68dca888fd1.js": "/P2PRixh/precache-manifest.054fb299ea56f0979c41b68dca888fd1.js",
+    "service-worker.js": "/P2PRixh/service-worker.js",
+    "static/css/main.77e141f4.chunk.css.map": "/P2PRixh/static/css/main.77e141f4.chunk.css.map",
+    "static/js/2.902094a5.chunk.js.LICENSE.txt": "/P2PRixh/static/js/2.902094a5.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/P2PRixh/static/media/Logo.d9d4f134.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.971231fc.js",
-    "static/js/2.02db3caf.chunk.js",
-    "static/css/main.e3af6fdd.chunk.css",
-    "static/js/main.ec960448.chunk.js"
+    "static/js/runtime-main.74033cf5.js",
+    "static/js/2.902094a5.chunk.js",
+    "static/css/main.77e141f4.chunk.css",
+    "static/js/main.71ff35e4.chunk.js"
   ]
 }
