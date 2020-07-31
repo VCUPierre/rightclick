@@ -11,18 +11,21 @@ export const SOCIAL_LINKS = {
         iconName: "instagram",
         link: "https://instagram.com/p2prixhmusic",
         color: "black",
+        surrounded: "circular",
     },
     {
         name: "Twitter",
         iconName: "twitter",
         link: "https://twitter.com/pay2playrich",
         color: "black",
+        surrounded: "",
     },
     {
         name: "Sound Cloud",
         iconName: "soundcloud",
         link: "https://soundcloud.com/p2prixh",
         color: "black",
+        surrounded: "bordered",
     },
 ]}
 // featuredTimerDate formats inclued '2020-02-01T01:02:03' or milliseconds e.g 1580518923000 - documentation here https://github.com/ndresx/react-countdown
