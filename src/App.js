@@ -3,8 +3,9 @@ import Home from './Home/components/Home'
 import { useMediaPredicate } from "react-media-hook";
 import {createUseStyles} from 'react-jss'
 import { BACKGROUND } from './assets/constants'
+import DarkModeToggle from './Home/components/DarkMode/DarkMode';
 // import  { BACKGROUND } from './assets/data'
-
+// import './styles.css';
 
 const useStyles = createUseStyles({
   backgroundImg: {
@@ -13,9 +14,9 @@ const useStyles = createUseStyles({
     'background-position': '50% 95%',
     'background-attachment': 'fixed',
     'background-size': 'contain',
-    'background-color': `${BACKGROUND.color}`
   }
 })
+//  'background-color': `${BACKGROUND.color}`
 
 const App = () => {
   const xsScreen = useMediaPredicate("(max-width: 375px)");
@@ -24,6 +25,7 @@ const App = () => {
   const classes = useStyles()
 
   return <div className={classes.backgroundImg}>
+      {/* <DarkModeToggle /> */}
       <Home deviceSize={xsScreen ? "xs" : mdScreen ? "md" : lgScreen ? "lg" : "xl"}/>
     </div>
 }
