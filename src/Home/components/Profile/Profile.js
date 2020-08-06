@@ -8,8 +8,21 @@ import './profile.css'
 
 const Profile = (props) => (
     <div>
-        <Header as='h1' textAlign='center' className='RCTopPadding'>
+        <Header 
+        as='h1' 
+        textAlign='center' 
+        className='RCTopPadding RCMarginBottom'
+        style={{
+            fontSize: '2.5em' 
+          }}
+        >
             {TITLE}
+        </Header>
+        <Header
+        as='h2' 
+        textAlign='center' 
+        className='RCMarginTop'
+        >
             <Grid textAlign='center' className='RCSpace-5'>
                 <Grid.Row>
                     <SocialLinks links={props.links}/>

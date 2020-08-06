@@ -10,7 +10,7 @@ const Home = (props) => (
     <Grid centered>
         <Grid.Row>
             <GridColumn>
-                <Profile links={SOCIAL_LINKS}/>
+                <Profile links={SOCIAL_LINKS} deviceSize={props.deviceSize}/>
             </GridColumn>
         </Grid.Row>
         <Grid.Row>

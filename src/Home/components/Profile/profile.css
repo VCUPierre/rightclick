@@ -4,6 +4,15 @@
 .RCTopPadding {
     padding-top: 15px !important;
 }
+
 .RCSpace-5 {
     padding-top: 5px !important;
+}
+
+.RCMarginBottom {
+    margin-bottom: 0 !important;
+}
+
+.RCMarginTop {
+    margin-top: 0 !important;
 }
