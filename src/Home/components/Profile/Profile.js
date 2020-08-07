@@ -11,12 +11,12 @@ const Profile = (props) => (
         <Header 
         as='h1' 
         textAlign='center' 
-        className='RCTopPadding RCMarginBottom'
+        className={`RCTopPadding RCMarginBottom ${TITLE.color}`}
         style={{
             fontSize: '2.5em' 
           }}
         >
-            {TITLE}
+            {TITLE.Title}
         </Header>
         <Header
         as='h2' 
