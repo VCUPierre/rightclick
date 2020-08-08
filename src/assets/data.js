@@ -1,4 +1,7 @@
-export const TITLE = "Pierre Randall"
+export const TITLE = {
+    Title: "Pierre Randall",
+    color: ""
+}
 export const PROFILE_PIC = "https://res.cloudinary.com/rightlink/image/upload/v1595178893/PierreR/Profile_gjsvbm.jpg"
 export const BACKGROUND = {
     image: false,
@@ -10,25 +13,33 @@ export const SOCIAL_LINKS = {
         name: "Instagram",
         iconName: "instagram",
         link: "https://www.instagram.com/__pierre9",
-        color: "black",
+        color: "purple",
+        surrounded: "",
+        surroundedInColor: false,
     },
     {
         name: "Twitter",
         iconName: "twitter",
         link: "https://twitter.com/__pierre9",
-        color: "black",
+        color: "blue",
+        surrounded: "circular",
+        surroundedInColor: false,
     },
     {
         name: "LinkedIn",
         iconName: "linkedin",
         link: "https://www.linkedin.com/in/pierre-randall-9a1517134",
-        color: "black",
+        color: "blue",
+        surrounded: "",
+        surroundedInColor: false,
     },
     {
         name: "Github",
         iconName: "github",
         link: "https://github.com/VCUPierre",
         color: "black",
+        surrounded: "circular",
+        surroundedInColor: false,
     },
 ]}
 
@@ -189,7 +200,7 @@ export const LINK_GROUP_2 = {
             internal: true,
             featured: true,
             featuredText: "New Content in ",
-            featuredTimerDate: "2020-08-03T00:00:00",
+            featuredTimerDate: "2020-12-02T00:00:00",
             featuredTimerText: "Live now",
             featuredColor: "green",
             pinned: false,
