@@ -3,8 +3,8 @@ import Home from './Home/components/Home'
 import { useMediaPredicate } from "react-media-hook";
 import {createUseStyles} from 'react-jss'
 import { BACKGROUND } from './assets/constants'
-import DarkModeToggle from './Home/components/DarkMode/DarkMode';
 // import  { BACKGROUND } from './assets/data'
+// import DarkModeToggle from './Home/components/DarkMode/DarkMode';
 // import './styles.css';
 
 const useStyles = createUseStyles({
