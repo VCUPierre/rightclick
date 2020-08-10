@@ -1,11 +1,10 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
 import Banner from '../Banner/Banner'
+import ModalMedia from '../ModalMedia/ModalMedia'
 import '../Links/Links.css'
 
-const ItemLinks = (props) => {
-    const coloredButton = props.link.buttonColor;
 
+const ItemLinks = (props) => {
     return <div>
         {props.link.featured 
         ?
@@ -18,22 +17,10 @@ const ItemLinks = (props) => {
                 timer={props.link.featuredTimerDate}
                 completeText={props.link.featuredTimerText}
             />
-            <Button 
-                {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
-                size='big'
-                color={props.link.buttonColor}   
-                fluid>
-                    {props.link.name}
-            </Button>
+            <ModalMedia link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
     </div>
     :
-    <Button 
-        {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}
-        size='big'
-        color={props.link.buttonColor} 
-        fluid>
-            {props.link.name}
-    </Button>
+    <ModalMedia link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
     }
     </div>
 }
