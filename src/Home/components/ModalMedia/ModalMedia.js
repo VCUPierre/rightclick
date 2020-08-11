@@ -10,7 +10,8 @@ function whichMedia(type, link, dSize) {
         return dSize === 'xs' ? <ReactPlayer 
                 url={link} 
                 playing 
-                muted 
+                muted
+                loop
                 className='RCCenter' 
                 width='100%' 
                 height='100%'
@@ -20,6 +21,7 @@ function whichMedia(type, link, dSize) {
                 url={link} 
                 playing 
                 muted 
+                loop
                 className='RCCenter' 
                 width='50%' 
                 height='50%'
