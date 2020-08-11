@@ -1,31 +1,19 @@
 import React from 'react'
 import { Modal, Image } from 'semantic-ui-react'
 import ReactPlayer from 'react-player'
+import MP4video from '../MP4video/MP4video'
 import './ModalMedia.css'
+
+// use react-player for video that doesn't need to auto play
 
 function whichMedia(type, link, dSize) {
     if (type === "still"){
         return <Image wrapped size='medium' src={link} />
-    } else if ( type === "item") {
-        return dSize === 'xs' ? <ReactPlayer 
-                url={link} 
-                playing 
-                muted
-                loop
-                className='RCCenter' 
-                width='100%' 
-                height='100%'
-                />
+    } else if ( type === "mp4") {
+        return dSize === 'xs' ? 
+                <MP4video video={link} w="100%" h="100%"/>
                 :
-                <ReactPlayer 
-                url={link} 
-                playing 
-                muted 
-                loop
-                className='RCCenter' 
-                width='50%' 
-                height='50%'
-                />
+                <MP4video video={link} w="50%" h="50%"/>
     }
     return <ReactPlayer url={link} width='100%' height='100%' />
 } 
