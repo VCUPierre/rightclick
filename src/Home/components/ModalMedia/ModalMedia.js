@@ -6,12 +6,12 @@ import './ModalMedia.css'
 
 // use react-player for video that doesn't need to auto play
 
-function whichMedia(type, link, dSize) {
+function whichMedia(type, link, dSize, vidPoster) {
     if (type === "still"){
         return <Image wrapped size='medium' src={link} />
     } else if ( type === "mp4") {
-        return dSize === 'xs' ? 
-                <MP4video video={link} w="100%" h="100%"/>
+        return dSize === 'xs' || 'md' ? 
+                <MP4video video={link} w="100%" h="100%" poster={vidPoster}/>
                 :
                 <MP4video video={link} w="50%" h="50%"/>
     }
@@ -20,7 +20,7 @@ function whichMedia(type, link, dSize) {
 
 const ModalMedia = (props) => {
     return <div className='center'>
-        {whichMedia(props.link.mainMedia.type, props.link.mainMedia.link, props.deviceSize)}
+        {whichMedia(props.link.mainMedia.type, props.link.mainMedia.link, props.deviceSize, props.link.mainMedia.videoPoster)}
         <Modal.Description className="pushOff-y">
             <h3>{props.link.mainMedia.mediaText}</h3>
         </Modal.Description>
