@@ -7,6 +7,8 @@ const MP4video = (props) => (
             <video
             loop
             muted
+            playsinline
+            autoplay
             style="width:${props.w}; height:${props.h}"
             poster="${props.poster}"
             >
