@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/BenRVAMiles/static/css/main.b2cd13a7.chunk.css",
-    "main.js": "/BenRVAMiles/static/js/main.e3003205.chunk.js",
-    "main.js.map": "/BenRVAMiles/static/js/main.e3003205.chunk.js.map",
-    "runtime-main.js": "/BenRVAMiles/static/js/runtime-main.7c32bc1f.js",
-    "runtime-main.js.map": "/BenRVAMiles/static/js/runtime-main.7c32bc1f.js.map",
-    "static/js/2.04094457.chunk.js": "/BenRVAMiles/static/js/2.04094457.chunk.js",
-    "static/js/2.04094457.chunk.js.map": "/BenRVAMiles/static/js/2.04094457.chunk.js.map",
-    "index.html": "/BenRVAMiles/index.html",
-    "precache-manifest.ae91a646b979068be6507f8b84526b8f.js": "/BenRVAMiles/precache-manifest.ae91a646b979068be6507f8b84526b8f.js",
-    "service-worker.js": "/BenRVAMiles/service-worker.js",
-    "static/css/main.b2cd13a7.chunk.css.map": "/BenRVAMiles/static/css/main.b2cd13a7.chunk.css.map",
-    "static/js/2.04094457.chunk.js.LICENSE.txt": "/BenRVAMiles/static/js/2.04094457.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/BenRVAMiles/static/media/Logo.d9d4f134.png"
+    "main.css": "/rightclick/static/css/main.b2cd13a7.chunk.css",
+    "main.js": "/rightclick/static/js/main.1a266416.chunk.js",
+    "main.js.map": "/rightclick/static/js/main.1a266416.chunk.js.map",
+    "runtime-main.js": "/rightclick/static/js/runtime-main.971231fc.js",
+    "runtime-main.js.map": "/rightclick/static/js/runtime-main.971231fc.js.map",
+    "static/js/2.04094457.chunk.js": "/rightclick/static/js/2.04094457.chunk.js",
+    "static/js/2.04094457.chunk.js.map": "/rightclick/static/js/2.04094457.chunk.js.map",
+    "index.html": "/rightclick/index.html",
+    "precache-manifest.531402f2bfa5a0666861e7758bfa2b9e.js": "/rightclick/precache-manifest.531402f2bfa5a0666861e7758bfa2b9e.js",
+    "service-worker.js": "/rightclick/service-worker.js",
+    "static/css/main.b2cd13a7.chunk.css.map": "/rightclick/static/css/main.b2cd13a7.chunk.css.map",
+    "static/js/2.04094457.chunk.js.LICENSE.txt": "/rightclick/static/js/2.04094457.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c32bc1f.js",
+    "static/js/runtime-main.971231fc.js",
     "static/js/2.04094457.chunk.js",
     "static/css/main.b2cd13a7.chunk.css",
-    "static/js/main.e3003205.chunk.js"
+    "static/js/main.1a266416.chunk.js"
   ]
 }
