@@ -40,6 +40,7 @@ export const LINK_GROUP_1 = {
             mainMedia: {},
             additionalLinks: [],  
             color: "",
+            colorOveride: "",
             colored: false,
             buttonColor: "",
             bannerSide: "",
