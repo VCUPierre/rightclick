@@ -20,17 +20,17 @@ const Links = (props) => {
     return <div>
     {props.link.type === "internal" 
     ? 
-    <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle}`}: {})}>
+    <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
         <InternalLinks link={props.link} deviceSize={props.deviceSize}/> 
     </Segment>
     : 
     props.link.type === "item" 
         ?
-        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle}`}: {})}>
+        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
             <ItemLinks link={props.link} deviceSize={props.deviceSize}/>
         </Segment>
         :
-        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle}`}: {})}>
+        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
             <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
         </Segment>
     }

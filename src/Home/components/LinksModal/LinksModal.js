@@ -12,9 +12,11 @@ const LinksModal = (props) => {
     return <div>
               <Modal size='small' trigger={<Button fluid size='big' color={props.links.buttonColor} {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}>{props.links.name}</Button>} closeIcon>
                 <Grid centered columns={2} >
-                    <Grid.Row className="RCTitleFix">
-                        <ModalHeader data={props.links} />
-                    </Grid.Row>
+                    {props.links.modalAlternativeText.removed ? "" :
+                        <Grid.Row className="RCTitleFix">
+                            <ModalHeader data={props.links} />
+                        </Grid.Row>
+                    }
                     <Grid.Row>
                         <Modal.Content image className='RCCenter RCPushDown'>
                             <ModalMedia link={props.links} />

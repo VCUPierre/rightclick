@@ -16,6 +16,9 @@
 .RCMarginTop {
     margin-top: 0 !important;
 }
-.RLwhite {
+.RLWhite {
     color: white !important;
+}
+.RLGold {
+    color: #d4af37 !important;
 }

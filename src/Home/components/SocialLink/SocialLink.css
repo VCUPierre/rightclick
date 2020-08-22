@@ -1,3 +1,6 @@
 .RLSocialPad {
     margin-left: .75rem !important;
 }
+i.inverted.bordered.black.icon, i.inverted.circular.black.icon.RLGold {
+    color: #d4af37 !important;
+}

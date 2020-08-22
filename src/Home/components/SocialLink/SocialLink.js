@@ -19,7 +19,7 @@ function boxed(surrounded) {
 }
 
 const SocialLink = (props) => {
-    return <a href={props.link.link}><Icon className='RLSocialPad' name={props.link.iconName} inverted={props.link.surroundedInColor} circular={circled(props.link.surrounded)} bordered={boxed(props.link.surrounded)} color={props.link.color} /></a>
+    return <a href={props.link.link}><Icon className={`RLSocialPad ${props.link.secondaryColor ? props.link.secondaryColor : ""}`} name={props.link.iconName} inverted={props.link.surroundedInColor} circular={circled(props.link.surrounded)} bordered={boxed(props.link.surrounded)} color={props.link.color} /></a>
 }
 
 export default SocialLink
