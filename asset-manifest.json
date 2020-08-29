@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/rightclick/static/css/main.836d0fdf.chunk.css",
-    "main.js": "/rightclick/static/js/main.71761dd4.chunk.js",
-    "main.js.map": "/rightclick/static/js/main.71761dd4.chunk.js.map",
-    "runtime-main.js": "/rightclick/static/js/runtime-main.46b30864.js",
-    "runtime-main.js.map": "/rightclick/static/js/runtime-main.46b30864.js.map",
-    "static/js/2.2dde0640.chunk.js": "/rightclick/static/js/2.2dde0640.chunk.js",
-    "static/js/2.2dde0640.chunk.js.map": "/rightclick/static/js/2.2dde0640.chunk.js.map",
-    "index.html": "/rightclick/index.html",
-    "precache-manifest.26c5a4c66d7d5cd590f9a0ad2b693275.js": "/rightclick/precache-manifest.26c5a4c66d7d5cd590f9a0ad2b693275.js",
-    "service-worker.js": "/rightclick/service-worker.js",
-    "static/css/main.836d0fdf.chunk.css.map": "/rightclick/static/css/main.836d0fdf.chunk.css.map",
-    "static/js/2.2dde0640.chunk.js.LICENSE.txt": "/rightclick/static/js/2.2dde0640.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png",
-    "static/media/LogoWhite.png": "/rightclick/static/media/LogoWhite.17285244.png"
+    "main.css": "/prototype/static/css/main.836d0fdf.chunk.css",
+    "main.js": "/prototype/static/js/main.ce2bcea2.chunk.js",
+    "main.js.map": "/prototype/static/js/main.ce2bcea2.chunk.js.map",
+    "runtime-main.js": "/prototype/static/js/runtime-main.5000da57.js",
+    "runtime-main.js.map": "/prototype/static/js/runtime-main.5000da57.js.map",
+    "static/js/2.2dde0640.chunk.js": "/prototype/static/js/2.2dde0640.chunk.js",
+    "static/js/2.2dde0640.chunk.js.map": "/prototype/static/js/2.2dde0640.chunk.js.map",
+    "index.html": "/prototype/index.html",
+    "precache-manifest.e64f22e84edc50394c61d61d75071ac6.js": "/prototype/precache-manifest.e64f22e84edc50394c61d61d75071ac6.js",
+    "service-worker.js": "/prototype/service-worker.js",
+    "static/css/main.836d0fdf.chunk.css.map": "/prototype/static/css/main.836d0fdf.chunk.css.map",
+    "static/js/2.2dde0640.chunk.js.LICENSE.txt": "/prototype/static/js/2.2dde0640.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/prototype/static/media/Logo.d9d4f134.png",
+    "static/media/LogoWhite.png": "/prototype/static/media/LogoWhite.17285244.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.46b30864.js",
+    "static/js/runtime-main.5000da57.js",
     "static/js/2.2dde0640.chunk.js",
     "static/css/main.836d0fdf.chunk.css",
-    "static/js/main.71761dd4.chunk.js"
+    "static/js/main.ce2bcea2.chunk.js"
   ]
 }
