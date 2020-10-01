@@ -16,6 +16,7 @@ const ItemLinks = (props) => {
                 deviceSize={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}
                 timer={props.link.featuredTimerDate}
                 completeText={props.link.featuredTimerText}
+                altColor={props.link.featuredAltStyle}
             />
             <ModalMedia link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
     </div>

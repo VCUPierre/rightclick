@@ -4,3 +4,9 @@
 .RCPadding {
     padding: 5px !important;
 }
+.fontColor.RLGold {
+    color: #d4af37 !important;
+}
+.fontColor.RLRed {
+    color: #db2828 !important;
+}

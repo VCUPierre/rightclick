@@ -4,3 +4,9 @@
 i.inverted.bordered.black.icon, i.inverted.circular.black.icon.RLGold {
     color: #d4af37 !important;
 }
+i.inverted.bordered.icon, i.inverted.circular.icon.RLRed{
+    color: #db2828 !important;
+}
+i.inverted.bordered.icon.RLWhite, i.inverted.circular.icon.RLWhite{
+    background-color: white !important;
+}

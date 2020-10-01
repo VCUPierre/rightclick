@@ -10,7 +10,7 @@ const LinksModal = (props) => {
     const coloredButton = props.links.buttonColor;
 
     return <div>
-              <Modal size='small' trigger={<Button fluid size='big' color={props.links.buttonColor} {...coloredButton ? {className: 'RCPadding'}: {className: 'RCPadding RCWhiteBG'}}>{props.links.name}</Button>} closeIcon>
+              <Modal size='small' trigger={<Button fluid size='big' color={props.links.buttonColor} {...coloredButton ? {className: `RCPadding fontColor ${props.link.fontColor}`}: {className: 'RCPadding RCWhiteBG'}}>{props.links.name}</Button>} closeIcon>
                 <Grid centered columns={2} >
                     {props.links.modalAlternativeText.removed ? "" :
                         <Grid.Row className="RCTitleFix">
