@@ -19,6 +19,11 @@
 .bannerPositionS {
     z-index: 100 !important;
     position: absolute !important;
-    left: -6% !important;
+    left: -5.5% !important;
     top: -1em !important;
+}
+.bannerRLGold {
+    border-color: #d4af37 !important;
+    background-color: #d4af37 !important;
+    color: #000000 !important;
 }
