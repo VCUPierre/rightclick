@@ -2,6 +2,7 @@ import React from 'react'
 import InternalLinks from '../InternalLinks/InternalLinks'
 import ExternalLinks from '../ExternalLinks/ExternalLinks'
 import ItemLinks from '../ItemLinks/ItemLinks'
+import StillExternal from '../Still_External/Still_External'
 import { Segment } from 'semantic-ui-react'
 import './Links.css'
 
@@ -30,9 +31,15 @@ const Links = (props) => {
             <ItemLinks link={props.link} deviceSize={props.deviceSize}/>
         </Segment>
         :
-        <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
-            <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
-        </Segment>
+        props.link.type === "still/external"
+            ?
+            <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
+                <StillExternal link={props.link} deviceSize={props.deviceSize}/>
+            </Segment>
+            :
+            <Segment color={props.link.color} {...(colored ? {inverted: true}: {})} {...(spaced ? {raised:true, className: `pushDown ${props.link.additionalStyle} ${props.link.color ? "" : props.link.colorOveride }`}: {})}>
+                <ExternalLinks link={props.link} deviceSize={props.deviceSize}/>
+            </Segment>
     }
 </div>
 }
