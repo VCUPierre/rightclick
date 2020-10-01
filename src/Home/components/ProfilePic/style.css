@@ -3,7 +3,7 @@
 }
 /*Change height per picture, needs to make this dynamic using jss*/
 .RLOneSize {
-    height: 250px !important; 
+    height: 220px !important; 
     width: auto !important;
     object-fit: contain !important;
 }
