@@ -1,4 +1,10 @@
 // Custom Colors = [RLGold,RLWhite]
+/* social link custom colors {
+   circle colors: [RLWhite]
+   icon colors: [RLRed] 
+}*/
+// if button is colored you must add a fontColor
+// to change border color of a colored button add color to additionalstyles
 export const TITLE = {
     title: "",
     color: ""
@@ -38,11 +44,13 @@ export const LINK_GROUP_1 = {
             featuredTimerDate: "",
             featuredTimerText: "",
             featuredColor: "",
+            featuredAltStyle: "",
             pinned: false,
             mainMedia: {},
             additionalLinks: [],  
             color: "",
             colorOveride: "",
+            fontColor: "",
             colored: false,
             buttonColor: "",
             bannerSide: "left",
