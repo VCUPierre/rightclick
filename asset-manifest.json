@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/rightclick/static/css/main.bb01c364.chunk.css",
-    "main.js": "/rightclick/static/js/main.c8cc78b7.chunk.js",
-    "main.js.map": "/rightclick/static/js/main.c8cc78b7.chunk.js.map",
-    "runtime-main.js": "/rightclick/static/js/runtime-main.46b30864.js",
-    "runtime-main.js.map": "/rightclick/static/js/runtime-main.46b30864.js.map",
-    "static/js/2.b41c9c6a.chunk.js": "/rightclick/static/js/2.b41c9c6a.chunk.js",
-    "static/js/2.b41c9c6a.chunk.js.map": "/rightclick/static/js/2.b41c9c6a.chunk.js.map",
-    "index.html": "/rightclick/index.html",
-    "precache-manifest.0856e00141bdb0878a57f9fe564b7b12.js": "/rightclick/precache-manifest.0856e00141bdb0878a57f9fe564b7b12.js",
-    "service-worker.js": "/rightclick/service-worker.js",
-    "static/css/main.bb01c364.chunk.css.map": "/rightclick/static/css/main.bb01c364.chunk.css.map",
-    "static/js/2.b41c9c6a.chunk.js.LICENSE.txt": "/rightclick/static/js/2.b41c9c6a.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png",
-    "static/media/LogoWhite.png": "/rightclick/static/media/LogoWhite.17285244.png"
+    "main.css": "/itscakess/static/css/main.277f3694.chunk.css",
+    "main.js": "/itscakess/static/js/main.3c56ab93.chunk.js",
+    "main.js.map": "/itscakess/static/js/main.3c56ab93.chunk.js.map",
+    "runtime-main.js": "/itscakess/static/js/runtime-main.786ace3c.js",
+    "runtime-main.js.map": "/itscakess/static/js/runtime-main.786ace3c.js.map",
+    "static/js/2.b41c9c6a.chunk.js": "/itscakess/static/js/2.b41c9c6a.chunk.js",
+    "static/js/2.b41c9c6a.chunk.js.map": "/itscakess/static/js/2.b41c9c6a.chunk.js.map",
+    "index.html": "/itscakess/index.html",
+    "precache-manifest.c47a3d7132c1c0ad151474b07c0085f9.js": "/itscakess/precache-manifest.c47a3d7132c1c0ad151474b07c0085f9.js",
+    "service-worker.js": "/itscakess/service-worker.js",
+    "static/css/main.277f3694.chunk.css.map": "/itscakess/static/css/main.277f3694.chunk.css.map",
+    "static/js/2.b41c9c6a.chunk.js.LICENSE.txt": "/itscakess/static/js/2.b41c9c6a.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "/itscakess/static/media/Logo.d9d4f134.png",
+    "static/media/LogoWhite.png": "/itscakess/static/media/LogoWhite.17285244.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.46b30864.js",
+    "static/js/runtime-main.786ace3c.js",
     "static/js/2.b41c9c6a.chunk.js",
-    "static/css/main.bb01c364.chunk.css",
-    "static/js/main.c8cc78b7.chunk.js"
+    "static/css/main.277f3694.chunk.css",
+    "static/js/main.3c56ab93.chunk.js"
   ]
 }
