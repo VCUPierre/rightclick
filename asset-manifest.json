@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.css": "/rightclick/static/css/main.85fdaaa9.chunk.css",
-    "main.js": "/rightclick/static/js/main.64ed51c2.chunk.js",
-    "main.js.map": "/rightclick/static/js/main.64ed51c2.chunk.js.map",
+    "main.css": "/rightclick/static/css/main.3ae64c45.chunk.css",
+    "main.js": "/rightclick/static/js/main.0620b38f.chunk.js",
+    "main.js.map": "/rightclick/static/js/main.0620b38f.chunk.js.map",
     "runtime-main.js": "/rightclick/static/js/runtime-main.46b30864.js",
     "runtime-main.js.map": "/rightclick/static/js/runtime-main.46b30864.js.map",
-    "static/css/2.cb7021a3.chunk.css": "/rightclick/static/css/2.cb7021a3.chunk.css",
-    "static/js/2.1114467f.chunk.js": "/rightclick/static/js/2.1114467f.chunk.js",
-    "static/js/2.1114467f.chunk.js.map": "/rightclick/static/js/2.1114467f.chunk.js.map",
+    "static/js/2.17cb5e60.chunk.js": "/rightclick/static/js/2.17cb5e60.chunk.js",
+    "static/js/2.17cb5e60.chunk.js.map": "/rightclick/static/js/2.17cb5e60.chunk.js.map",
     "index.html": "/rightclick/index.html",
-    "precache-manifest.c9ae44d4ede94444729ba84ea0bc8cc2.js": "/rightclick/precache-manifest.c9ae44d4ede94444729ba84ea0bc8cc2.js",
+    "precache-manifest.4669b5a4eb4432f406e6da813c40ec26.js": "/rightclick/precache-manifest.4669b5a4eb4432f406e6da813c40ec26.js",
     "service-worker.js": "/rightclick/service-worker.js",
-    "static/css/2.cb7021a3.chunk.css.map": "/rightclick/static/css/2.cb7021a3.chunk.css.map",
-    "static/css/main.85fdaaa9.chunk.css.map": "/rightclick/static/css/main.85fdaaa9.chunk.css.map",
-    "static/js/2.1114467f.chunk.js.LICENSE.txt": "/rightclick/static/js/2.1114467f.chunk.js.LICENSE.txt",
+    "static/css/main.3ae64c45.chunk.css.map": "/rightclick/static/css/main.3ae64c45.chunk.css.map",
+    "static/js/2.17cb5e60.chunk.js.LICENSE.txt": "/rightclick/static/js/2.17cb5e60.chunk.js.LICENSE.txt",
     "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png",
     "static/media/LogoWhite.png": "/rightclick/static/media/LogoWhite.17285244.png"
   },
   "entrypoints": [
     "static/js/runtime-main.46b30864.js",
-    "static/css/2.cb7021a3.chunk.css",
-    "static/js/2.1114467f.chunk.js",
-    "static/css/main.85fdaaa9.chunk.css",
-    "static/js/main.64ed51c2.chunk.js"
+    "static/js/2.17cb5e60.chunk.js",
+    "static/css/main.3ae64c45.chunk.css",
+    "static/js/main.0620b38f.chunk.js"
   ]
 }
