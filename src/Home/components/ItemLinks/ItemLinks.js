@@ -18,10 +18,10 @@ const ItemLinks = (props) => {
                 completeText={props.link.featuredTimerText}
                 altColor={props.link.featuredAltStyle}
             />
-            <ModalMedia link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
+            <ModalMedia customFont={props.customFont} link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
     </div>
     :
-    <ModalMedia link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
+    <ModalMedia customFont={props.customFont} link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
     }
     </div>
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import Home from './Home/components/Home'
 import { useMediaPredicate } from "react-media-hook";
 import {createUseStyles} from 'react-jss'
-import { LOGO, BACKGROUND, SOCIAL_LINKS, LINK_GROUP_1, TITLE, PROFILE_PIC } from './assets/usersData/PierreR/data'
+import GoogleFontLoader from 'react-google-font-loader';
+import { LOGO, BACKGROUND, SOCIAL_LINKS, LINK_GROUP_1, TITLE, PROFILE_PIC } from './assets/usersData/P2PRixh/data'
 import { Helmet } from 'react-helmet'
 
 const useStyles = createUseStyles({
@@ -37,6 +38,14 @@ const App = () => {
             `}
         </style>
       </Helmet>
+      <GoogleFontLoader
+        fonts={[
+          {
+            font: LINK_GROUP_1.groupFont,
+            weights: [400],
+          },
+        ]}
+      />
       <Home 
         deviceSize={xsScreen ? "xs" : mdScreen ? "md" : lgScreen ? "lg" : "xl"}
         socialLinks={SOCIAL_LINKS}
@@ -44,6 +53,7 @@ const App = () => {
         profileImage={PROFILE_PIC}
         linkGroups={linkGroups}
         logo={LOGO}
+        customFont={LINK_GROUP_1.groupFont}
         />
     </div>
 }

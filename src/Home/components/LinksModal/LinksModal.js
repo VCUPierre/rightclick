@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {createUseStyles} from 'react-jss';
 import { Modal, Button, Grid } from 'semantic-ui-react'
 import ModalHeader from '../ModalHeader/ModalHeader'
 import ModalMedia from '../ModalMedia/ModalMedia'
@@ -6,11 +7,18 @@ import ModalLinks from '../ModalLinks/ModalLinks'
 import './LinkModal.css'
 import './button.css'
 
+const useStyles = createUseStyles({
+    customFont: {
+        'font-family': props => props.customFont
+    },
+});
+
 const LinksModal = (props) => {
+    const classes = useStyles(props)
     const coloredButton = props.links.buttonColor;
 
     return <div>
-              <Modal size='small' trigger={<Button fluid size='big' color={props.links.buttonColor} {...coloredButton ? {className: `RCPadding fontColor ${props.link.fontColor}`}: {className: 'RCPadding RCWhiteBG'}}>{props.links.name}</Button>} closeIcon>
+              <Modal size='small' trigger={<Button fluid size='big' color={props.links.buttonColor} {...coloredButton ? {className: `RCPadding fontColor ${props.link.fontColor} ${classes.customFont}`}: {className: `RCPadding RCWhiteBG ${classes.customFont}`}}>{props.links.name}</Button>} closeIcon>
                 <Grid centered columns={2} >
                     {props.links.modalAlternativeText.removed ? "" :
                         <Grid.Row className="RCTitleFix">

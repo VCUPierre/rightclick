@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {createUseStyles} from 'react-jss';
 import { Button } from 'semantic-ui-react'
 import Banner from '../Banner/Banner'
 import '../Links/Links.css'
 import './button.css'
 
+const useStyles = createUseStyles({
+    customFont: {
+        'font-family': props => [props.customFont, '!important'] 
+    },
+});
+
 const ExternalLinks = (props) => {
+    const classes = useStyles(props)
     const coloredButton = props.link.buttonColor;
 
     return <div>
@@ -24,9 +32,9 @@ const ExternalLinks = (props) => {
             as='a' 
             href={props.link.link}
             {...coloredButton ? {
-                className: `RCPadding ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
+                className: `RCPadding ${classes.customFont} ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
                 } : {
-                className: `RCPadding RCWhiteBG ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
+                className: `RCPadding RCWhiteBG ${classes.customFont} ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
             }}
             color={props.link.buttonColor} 
             size='big'
@@ -39,9 +47,9 @@ const ExternalLinks = (props) => {
         as='a' 
         href={props.link.link}
         {...coloredButton ? {
-            className: `RCPadding ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
+            className: `RCPadding ${classes.customFont} ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
             } : {
-            className: `RCPadding RCWhiteBG ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
+            className: `RCPadding RCWhiteBG ${classes.customFont} ${props.link.fontColor ? `fontColor ${props.link.fontColor}` : ""}`
         }}
         color={props.link.buttonColor} 
         size='big'  

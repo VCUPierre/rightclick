@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+import {createUseStyles} from 'react-jss';
 import { Modal, Image } from 'semantic-ui-react'
 import ReactPlayer from 'react-player'
 import MP4video from '../MP4video/MP4video'
 import './ModalMedia.css'
 
 // use react-player for video that doesn't need to auto play
+
+const useStyles = createUseStyles({
+    customFont: {
+        'font-family': props => props.customFont ? [props.customFont, '!important'] : ['Lato', '!important']
+    },
+})
 
 function whichMedia(type, link, dSize, vidPoster) {
     if (type === "still"){
@@ -19,10 +26,12 @@ function whichMedia(type, link, dSize, vidPoster) {
 } 
 
 const ModalMedia = (props) => {
+    const classes = useStyles(props)
+
     return <div className='center'>
         {whichMedia(props.link.mainMedia.type, props.link.mainMedia.link, props.deviceSize, props.link.mainMedia.videoPoster)}
         <Modal.Description className="pushOff-y">
-            <h3>{props.link.mainMedia.mediaText}</h3>
+            <h3 className={classes.customFont}>{props.link.mainMedia.mediaText}</h3>
         </Modal.Description>
     </div>
 }

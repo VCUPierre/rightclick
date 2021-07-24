@@ -13,7 +13,7 @@ const LinkGroup = (props) => (
         
         <div >
             {props.links.group.map(element => {
-                return <Links link={element} deviceSize={props.deviceSize}/>
+                return <Links link={element} deviceSize={props.deviceSize} customFont={props.customFont}/>
             })}
         </div>
     </div>

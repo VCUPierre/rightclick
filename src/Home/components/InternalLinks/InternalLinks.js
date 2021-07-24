@@ -17,10 +17,10 @@ const InternalLinks = (props) => {
         completeText={props.link.featuredTimerText}
         altColor={props.link.featuredAltStyle}
       />
-      <LinksModal links={props.link}/>
+      <LinksModal links={props.link} customFont={props.customFont}/>
   </div>
   :
-      <LinksModal links={props.link}/>
+      <LinksModal links={props.link} customFont={props.customFont}/>
   }
 </div>
 }

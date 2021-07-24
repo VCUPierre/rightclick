@@ -21,7 +21,7 @@ const Home = (props) => {
         </Grid.Row>
         { props.linkGroups.map((linkData, index) => {
             return  <Grid.Row>
-                        <LinkGroup key={index} links={linkData} deviceSize={props.deviceSize}/>
+                        <LinkGroup key={index} links={linkData} deviceSize={props.deviceSize} customFont={props.customFont}/>
                     </Grid.Row>
         })
         }
