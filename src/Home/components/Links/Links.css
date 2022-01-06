@@ -1,10 +1,16 @@
-.pushDown{
+.pushDown {
     margin-bottom: 5px !important;
 }
 .longText {
     padding-left: 5px !important;
     padding-right: 5px !important;
 }
+.longestText {
+    padding: 1em 0.25em !important;
+}
 .segment.RLGold {
-    border-top: 2px solid #d4af37!important
+    border-top: 2px solid #d4af37 !important;
+}
+.segment.RLViolet {
+    border-top: 2px solid #6435c9 !important;
 }

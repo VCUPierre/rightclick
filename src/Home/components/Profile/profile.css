@@ -6,13 +6,15 @@
 }
 
 .RCSpace-5 {
-    padding-top: 5px !important;
+    margin-top: 1rem !important;
 }
 
 .RCMarginBottom {
     margin-bottom: 0 !important;
 }
-
+.RCMarginBottom-1 {
+    margin-bottom: 1rem !important;
+}
 .RCMarginTop {
     margin-top: 0 !important;
 }
@@ -21,4 +23,7 @@
 }
 .RLGold {
     color: #d4af37 !important;
+}
+.RLViolet {
+    color: #6435c9 !important;
 }

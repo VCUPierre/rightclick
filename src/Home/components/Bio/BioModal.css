@@ -1,0 +1,14 @@
+.RCCenter {
+    justify-content: center;
+}
+.RCTitleFix {
+    margin-top: 10px !important;
+    padding-bottom: 0 !important;
+}
+.RCPushDown {
+    margin-bottom: 10px !important;
+}
+.RLBio {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}

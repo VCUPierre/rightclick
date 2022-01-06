@@ -1,12 +1,19 @@
 .RLSocialPad {
-    margin-left: .75rem !important;
+    margin-left: 0.75rem !important;
 }
-i.inverted.bordered.black.icon, i.inverted.circular.black.icon.RLGold {
+i.inverted.bordered.black.icon,
+i.inverted.circular.black.icon.RLGold {
     color: #d4af37 !important;
 }
-i.inverted.bordered.icon, i.inverted.circular.icon.RLRed{
+i.inverted.bordered.icon,
+i.inverted.circular.icon.RLRed {
     color: #db2828 !important;
 }
-i.inverted.bordered.icon.RLWhite, i.inverted.circular.icon.RLWhite{
+i.inverted.bordered.icon,
+i.inverted.circular.icon.RLViolet {
+    color: #6435c9 !important;
+}
+i.inverted.bordered.icon.RLWhite,
+i.inverted.circular.icon.RLWhite {
     background-color: white !important;
 }
