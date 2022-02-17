@@ -1,5 +1,5 @@
 {
-  "homepage": "https://right-link.com/P2PRixh",
+  "homepage": "https://vcupierre.github.io/rightclick/",
   "name": "rightclick",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "pluralize": "^8.0.0",
     "prettier": "^2.0.5",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-countdown": "^2.2.1",
     "react-dom": "^16.13.1",
@@ -29,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serverDeploy": "react-scripts build && bash deploy.sh",
+    "setHomepage": "bash setHomePage.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
