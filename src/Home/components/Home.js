@@ -41,16 +41,42 @@ const Home = (props) => {
                     </Grid.Row>
                 );
             })}
-            <Segment basic className="RCMarginBottom-1">
-                <Image
-                    src={whichLogo(props.logo)}
-                    as="a"
-                    size="small"
-                    href="https://rightclickrva.com/business"
-                    target="_blank"
-                    spaced
-                />
-            </Segment>
+            <div>
+                {props.background.logoLink ? (
+                    <Grid.Row className="RCLogoZeroBottom">
+                        <Segment basic className="RCLogoZeroBottom">
+                            <Image
+                                className="RCLogoZeroBottom"
+                                src={props.background.logoLink}
+                                as="a"
+                                size="tiny"
+                                href={props.background.logoActiveLink}
+                                target="_blank"
+                                spaced
+                            />
+                        </Segment>
+                    </Grid.Row>
+                ) : (
+                    ''
+                )}
+                <Segment
+                    basic
+                    className={`${
+                        props.background.logoLink
+                            ? 'RCDoubleLogo'
+                            : 'RCMarginBottom-1'
+                    }`}
+                >
+                    <Image
+                        src={whichLogo(props.logo)}
+                        as="a"
+                        size="small"
+                        href="https://rightclickrva.com/business"
+                        target="_blank"
+                        spaced
+                    />
+                </Segment>
+            </div>
         </Grid>
     );
 };
