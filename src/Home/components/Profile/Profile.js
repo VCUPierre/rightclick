@@ -18,7 +18,14 @@ const Profile = (props) => (
         </Header>
         <Header as="h2" textAlign="center" className="RCMarginTop">
             <Grid textAlign="center" className="RCSpace-5">
-                <Grid.Row className="RCNoTopPadding RCMarginBottom-2">
+                <Grid.Row
+                    className={`RCNoTopPadding ${
+                        // will need to enforce 'all or nothing' on surrounding social links
+                        props.links.group[0].surrounded
+                            ? 'RCMarginBottom-2'
+                            : ''
+                    }`}
+                >
                     <SocialLinks links={props.links} />
                 </Grid.Row>
                 <Grid.Row className="RCNoTopPadding">

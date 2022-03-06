@@ -10,9 +10,10 @@ const LinkGroup = (props) => (
         </Header>
 
         <div>
-            {props.links.group.map((element) => {
+            {props.links.group.map((element, i) => {
                 return (
                     <Links
+                        key={`Social-links-${i + 1}`}
                         link={element}
                         deviceSize={props.deviceSize}
                         customFont={props.customFont}

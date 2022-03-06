@@ -28,7 +28,10 @@ const Home = (props) => {
             </Grid.Row>
             {props.linkGroups.map((linkData, index) => {
                 return (
-                    <Grid.Row className="RCNoTopPadding RCMarginBottom-2">
+                    <Grid.Row
+                        key={`linkgroup-${index + 1}`}
+                        className="RCNoTopPadding RCMarginBottom-2"
+                    >
                         <LinkGroup
                             key={index}
                             links={linkData}

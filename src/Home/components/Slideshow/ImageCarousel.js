@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     CarouselProvider,
     Slide,
@@ -6,10 +6,10 @@ import {
     Image,
     ButtonBack,
     ButtonNext,
-} from "pure-react-carousel";
-import { Divider } from "semantic-ui-react";
-import CustomDotGroup from "./CustomDotGroup";
-import "pure-react-carousel/dist/react-carousel.es.css";
+} from 'pure-react-carousel';
+import { Divider } from 'semantic-ui-react';
+import CustomDotGroup from './CustomDotGroup';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const ImageCarousel = (props) => (
     <CarouselProvider
@@ -21,7 +21,7 @@ const ImageCarousel = (props) => (
     >
         <Slider>
             {props.collection.map((img, i) => (
-                <Slide index={i}>
+                <Slide key={`Slide-image-${i + 1}`} index={i}>
                     <Image src={img} />
                 </Slide>
             ))}
@@ -30,8 +30,8 @@ const ImageCarousel = (props) => (
         <Divider />
         {props.collection.length > 7 ? (
             <>
-                <ButtonBack className={"ui button"}>Back</ButtonBack>
-                <ButtonNext className={"ui button"}>Next</ButtonNext>
+                <ButtonBack className={'ui button'}>Back</ButtonBack>
+                <ButtonNext className={'ui button'}>Next</ButtonNext>
             </>
         ) : (
             <CustomDotGroup slides={props.collection.length} />

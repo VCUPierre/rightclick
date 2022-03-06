@@ -51,9 +51,16 @@ const LinksModal = (props) => {
                         <Modal.Content image className="RCCenter RCPushDown">
                             <ModalMedia link={props.links} />
                             {props.links.additionalLinks
-                                ? props.links.additionalLinks.map((element) => {
-                                      return <ModalLinks link={element} />;
-                                  })
+                                ? props.links.additionalLinks.map(
+                                      (element, i) => {
+                                          return (
+                                              <ModalLinks
+                                                  key={`links-modal-${i + 1}`}
+                                                  link={element}
+                                              />
+                                          );
+                                      }
+                                  )
                                 : ' '}
                         </Modal.Content>
                     </Grid.Row>
