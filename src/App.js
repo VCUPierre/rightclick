@@ -10,7 +10,7 @@ import {
     LINK_GROUP_1,
     TITLE,
     PROFILE_PIC,
-} from './assets/usersData/P2PRixh/data';
+} from './assets/usersData/RazorRamon/data';
 import { Helmet } from 'react-helmet';
 import './App.css';
 
@@ -40,7 +40,7 @@ const App = () => {
 
     return (
         <div>
-            {console.log('window Width', window.innerWidth)}
+            {/* {console.log('window Width', window.innerWidth)} */}
             <Helmet>
                 <title>Right-Link</title>
                 <style>
@@ -61,14 +61,18 @@ const App = () => {
             `}
                 </style>
             </Helmet>
-            <GoogleFontLoader
-                fonts={[
-                    {
-                        font: LINK_GROUP_1.groupFont,
-                        weights: [400],
-                    },
-                ]}
-            />
+            {LINK_GROUP_1.groupFont ? (
+                <GoogleFontLoader
+                    fonts={[
+                        {
+                            font: LINK_GROUP_1.groupFont,
+                            weights: [400],
+                        },
+                    ]}
+                />
+            ) : (
+                ''
+            )}
             <Home
                 deviceSize={
                     xsScreen ? 'xs' : mdScreen ? 'md' : lgScreen ? 'lg' : 'xl'

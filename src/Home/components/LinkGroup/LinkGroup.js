@@ -5,7 +5,19 @@ import './LinkGroup.css';
 
 const LinkGroup = (props) => (
     <div className="stretched">
-        <Header as="h2" color={props.links.groupColor}>
+        <Header
+            as="h2"
+            color={
+                props.links.groupColor.startsWith('RL')
+                    ? 'black'
+                    : props.links.groupColor
+            }
+            className={
+                props.links.groupColor.startsWith('RL')
+                    ? props.links.groupColor
+                    : ''
+            }
+        >
             <span>{props.links.groupName}</span>
         </Header>
 

@@ -1,7 +1,7 @@
-import React from "react";
-import { Header } from "semantic-ui-react";
-import Banner from "../Banner/Banner";
-import ImageCarousel from "./ImageCarousel";
+import React from 'react';
+import { Header } from 'semantic-ui-react';
+import Banner from '../Banner/Banner';
+import ImageCarousel from './ImageCarousel';
 // import CardCarousel from "./CardCarousel";
 
 const Slideshow = (props) => {
@@ -14,13 +14,13 @@ const Slideshow = (props) => {
                         color={props.link.featuredColor}
                         bannerSide={props.link.bannerSide}
                         deviceSize={
-                            props.deviceSize === "xs"
-                                ? "bannerPositionS"
-                                : props.deviceSize === "md"
-                                ? "bannerPositionM"
-                                : props.deviceSize === "lg"
-                                ? "bannerPositionL"
-                                : "bannerPositionXL"
+                            props.deviceSize === 'xs'
+                                ? 'bannerPositionS'
+                                : props.deviceSize === 'md'
+                                ? 'bannerPositionM'
+                                : props.deviceSize === 'lg'
+                                ? 'bannerPositionL'
+                                : 'bannerPositionXL'
                         }
                         timer={props.link.featuredTimerDate}
                         completeText={props.link.featuredTimerText}
@@ -28,6 +28,10 @@ const Slideshow = (props) => {
                     />
                     <ImageCarousel
                         collection={props.link.mainMedia.collection}
+                        linkType={props.link.mainMedia.linkType}
+                        link={props.link.link}
+                        name={props.link.mainMedia.mediaText}
+                        additionalLinks={props.link.additionalLinks}
                     />
                     <Header
                         as="h3"
@@ -43,6 +47,10 @@ const Slideshow = (props) => {
                 <div>
                     <ImageCarousel
                         collection={props.link.mainMedia.collection}
+                        link={props.link.link}
+                        linkType={props.link.mainMedia.linkType}
+                        name={props.link.mainMedia.mediaText}
+                        additionalLinks={props.link.additionalLinks}
                     />
                     <Header
                         as="h3"
