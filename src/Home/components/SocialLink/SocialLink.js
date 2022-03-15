@@ -1,38 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from 'semantic-ui-react';
 import './SocialLink.css';
 
 function circled(surrounded) {
-    if (surrounded === 'circular') {
-        return true;
-    } else {
-        return false;
-    }
+    return surrounded === 'circular' ? true : false;
 }
 
 function boxed(surrounded) {
-    if (surrounded === 'bordered') {
-        return true;
-    } else {
-        return false;
-    }
+    return surrounded === 'bordered' ? true : false;
 }
 
-const SocialLink = (props) => {
+const SocialLink = ({ link }) => {
     return (
-        <a href={props.link.link}>
+        <a href={link.link}>
             <Icon
                 className={`RLSocialPad ${
-                    props.link.secondaryColor ? props.link.secondaryColor : ''
+                    link.secondaryColor ? link.secondaryColor : ''
                 }`}
-                name={props.link.iconName}
-                inverted={props.link.inverted}
-                circular={circled(props.link.surrounded)}
-                bordered={boxed(props.link.surrounded)}
-                color={props.link.color}
+                name={link.iconName}
+                inverted={link.inverted}
+                circular={circled(link.surrounded)}
+                bordered={boxed(link.surrounded)}
+                color={link.color}
             />
         </a>
     );
+};
+
+SocialLink.propTypes = {
+    link: PropTypes.object,
 };
 
 export default SocialLink;

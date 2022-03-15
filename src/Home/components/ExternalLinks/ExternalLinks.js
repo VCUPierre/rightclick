@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { Button } from 'semantic-ui-react';
 import Banner from '../Banner/Banner';
@@ -11,39 +12,39 @@ const useStyles = createUseStyles({
     },
 });
 
-const ExternalLinks = (props) => {
+const ExternalLinks = ({ link, deviceSize, customFont, ...props }) => {
     const classes = useStyles(props);
-    const coloredButton = props.link.buttonColor;
+    const coloredButton = link.buttonColor;
 
     return (
         <div>
-            {props.link.featured ? (
+            {link.featured ? (
                 <div>
                     <Banner
-                        text={props.link.featuredText}
-                        color={props.link.featuredColor}
-                        bannerSide={props.link.bannerSide}
+                        text={link.featuredText}
+                        color={link.featuredColor}
+                        bannerSide={link.bannerSide}
                         deviceSize={
-                            props.deviceSize === 'xs'
+                            deviceSize === 'xs'
                                 ? 'bannerPositionS'
-                                : props.deviceSize === 'md'
+                                : deviceSize === 'md'
                                 ? 'bannerPositionM'
-                                : props.deviceSize === 'lg'
+                                : deviceSize === 'lg'
                                 ? 'bannerPositionL'
                                 : 'bannerPositionXL'
                         }
-                        timer={props.link.featuredTimerDate}
-                        completeText={props.link.featuredTimerText}
-                        altColor={props.link.featuredAltStyle}
+                        timer={link.featuredTimerDate}
+                        completeText={link.featuredTimerText}
+                        altColor={link.featuredAltStyle}
                     />
                     <Button
                         as="a"
-                        href={props.link.link}
+                        href={link.link}
                         {...(coloredButton
                             ? {
                                   className: `RCPadding ${classes.customFont} ${
-                                      props.link.fontColor
-                                          ? `fontColor ${props.link.fontColor}`
+                                      link.fontColor
+                                          ? `fontColor ${link.fontColor}`
                                           : ''
                                   }`,
                               }
@@ -51,27 +52,27 @@ const ExternalLinks = (props) => {
                                   className: `RCPadding RCWhiteBG ${
                                       classes.customFont
                                   } ${
-                                      props.link.fontColor
-                                          ? `fontColor ${props.link.fontColor}`
+                                      link.fontColor
+                                          ? `fontColor ${link.fontColor}`
                                           : ''
                                   }`,
                               })}
-                        color={props.link.buttonColor}
+                        color={link.buttonColor}
                         size="big"
                         fluid
                     >
-                        {props.link.name}
+                        {link.name}
                     </Button>
                 </div>
             ) : (
                 <Button
                     as="a"
-                    href={props.link.link}
+                    href={link.link}
                     {...(coloredButton
                         ? {
                               className: `RCPadding ${classes.customFont} ${
-                                  props.link.fontColor
-                                      ? `fontColor ${props.link.fontColor}`
+                                  link.fontColor
+                                      ? `fontColor ${link.fontColor}`
                                       : ''
                               }`,
                           }
@@ -79,20 +80,26 @@ const ExternalLinks = (props) => {
                               className: `RCPadding RCWhiteBG ${
                                   classes.customFont
                               } ${
-                                  props.link.fontColor
-                                      ? `fontColor ${props.link.fontColor}`
+                                  link.fontColor
+                                      ? `fontColor ${link.fontColor}`
                                       : ''
                               }`,
                           })}
-                    color={props.link.buttonColor}
+                    color={link.buttonColor}
                     size="big"
                     fluid
                 >
-                    {props.link.name}
+                    {link.name}
                 </Button>
             )}
         </div>
     );
+};
+
+ExternalLinks.propTypes = {
+    link: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
 };
 
 export default ExternalLinks;

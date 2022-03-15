@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import InternalLinks from '../InternalLinks/InternalLinks';
 import ExternalLinks from '../ExternalLinks/ExternalLinks';
 import ItemLinks from '../ItemLinks/ItemLinks';
@@ -8,175 +9,135 @@ import Bio from '../Bio/Bio';
 import { Segment } from 'semantic-ui-react';
 import './Links.css';
 
-// const pinnedLink = (element) => {
-//     return <Segment
-//     color='green'
-//     className="pushDown">
-//         {isInternalLink(element, )}
-//     </Segment>
-// }
-// const useStyles = createUseStyles({
-//     customFont: {
-//         'font-family': props => props.customFont
-//     },
-//     //  'background-color': `${BACKGROUND.color}`
-// })
-
-const Links = (props) => {
-    let spaced = props.link.linkSpaced;
-    let colored = props.link.colored;
-    // const classes = useStyles(props)
-
-    // const useStyles = createUseStyles({
-    //     customFont: {
-    //         'font-family': `${props.customFont}`
-    //     },
-    //     //  'background-color': `${BACKGROUND.color}`
-    // })
+const Links = ({ link, deviceSize, customFont }) => {
+    let spaced = link.linkSpaced;
+    let colored = link.colored;
 
     return (
         <div>
-            {props.link.type === 'internal' ? (
+            {link.type === 'internal' ? (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <InternalLinks
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
-            ) : props.link.type === 'item' ? (
+            ) : link.type === 'item' ? (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <ItemLinks
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
-            ) : props.link.type === 'still/external' ? (
+            ) : link.type === 'still/external' ? (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <StillExternal
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
-            ) : props.link.type === 'slideshow' ? (
+            ) : link.type === 'slideshow' ? (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <Slideshow
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
-            ) : props.link.type === 'bio' ? (
+            ) : link.type === 'bio' ? (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <Bio
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
             ) : (
                 <Segment
-                    color={props.link.color}
+                    color={link.color}
                     {...(colored ? { inverted: true } : {})}
                     {...(spaced
                         ? {
                               raised: true,
-                              className: `pushDown ${
-                                  props.link.additionalStyle
-                              } ${
-                                  props.link.color
-                                      ? ''
-                                      : props.link.colorOveride
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
                               }`,
                           }
                         : {})}
                 >
                     <ExternalLinks
-                        link={props.link}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 </Segment>
             )}
         </div>
     );
+};
+
+Links.propTypes = {
+    link: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
 };
 
 export default Links;

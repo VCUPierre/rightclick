@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { Modal, Button, Grid } from 'semantic-ui-react';
 import ModalHeader from '../ModalHeader/ModalHeader';
@@ -13,9 +14,9 @@ const useStyles = createUseStyles({
     },
 });
 
-const LinksModal = (props) => {
+const LinksModal = ({ link, customFont, deviceSize, ...props }) => {
     const classes = useStyles(props);
-    const coloredButton = props.links.buttonColor;
+    const coloredButton = link.buttonColor;
 
     return (
         <div>
@@ -25,42 +26,40 @@ const LinksModal = (props) => {
                     <Button
                         fluid
                         size="big"
-                        color={props.links.buttonColor}
+                        color={link.buttonColor}
                         {...(coloredButton
                             ? {
-                                  className: `RCPadding fontColor ${props.links.fontColor} ${classes.customFont}`,
+                                  className: `RCPadding fontColor ${link.fontColor} ${classes.customFont}`,
                               }
                             : {
                                   className: `RCPadding RCWhiteBG ${classes.customFont}`,
                               })}
                     >
-                        {props.links.name}
+                        {link.name}
                     </Button>
                 }
                 closeIcon
             >
                 <Grid centered columns={2}>
-                    {props.links.modalAlternativeText.removed ? (
+                    {link.modalAlternativeText.removed ? (
                         ''
                     ) : (
                         <Grid.Row className="RCTitleFix">
-                            <ModalHeader data={props.links} />
+                            <ModalHeader link={link} />
                         </Grid.Row>
                     )}
                     <Grid.Row>
                         <Modal.Content image className="RCCenter RCPushDown">
-                            <ModalMedia link={props.links} />
-                            {props.links.additionalLinks
-                                ? props.links.additionalLinks.map(
-                                      (element, i) => {
-                                          return (
-                                              <ModalLinks
-                                                  key={`links-modal-${i + 1}`}
-                                                  link={element}
-                                              />
-                                          );
-                                      }
-                                  )
+                            <ModalMedia link={link} deviceSize={deviceSize} />
+                            {link.additionalLinks
+                                ? link.additionalLinks.map((element, i) => {
+                                      return (
+                                          <ModalLinks
+                                              key={`links-modal-${i + 1}`}
+                                              link={element}
+                                          />
+                                      );
+                                  })
                                 : ' '}
                         </Modal.Content>
                     </Grid.Row>
@@ -68,6 +67,12 @@ const LinksModal = (props) => {
             </Modal>
         </div>
     );
+};
+
+LinksModal.propTypes = {
+    link: PropTypes.object,
+    customFont: PropTypes.string,
+    deviceSize: PropTypes.string,
 };
 
 export default LinksModal;

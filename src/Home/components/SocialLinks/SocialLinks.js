@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SocialLink from '../SocialLink/SocialLink';
 
-const SocialLinks = (props) => (
+const SocialLinks = ({ socialLinks }) => (
     <div>
-        {props.links.group.map((element, i) => {
-            return <SocialLink key={`social-link-${i + 1}`} link={element} />;
+        {socialLinks.group.map((link, i) => {
+            return <SocialLink key={`social-link-${i + 1}`} link={link} />;
         })}
     </div>
 );
+
+SocialLinks.propTypes = {
+    socialLinks: PropTypes.object,
+};
 
 export default SocialLinks;

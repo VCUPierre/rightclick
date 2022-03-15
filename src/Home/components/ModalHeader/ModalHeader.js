@@ -1,9 +1,24 @@
-import React from 'react'
-import { Header } from 'semantic-ui-react'
-import './ModalHeader.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Header } from 'semantic-ui-react';
+import './ModalHeader.css';
 
-const ModalHeader = (props) => {
-    return <Header as='h1' textAlign='center' className='RCborderNone RCtopPushoff'>{props.data.modalAlternativeText.text ? props.data.modalAlternativeText.text : props.data.name}</Header>
-}
+const ModalHeader = ({ link }) => {
+    return (
+        <Header
+            as="h1"
+            textAlign="center"
+            className="RCborderNone RCtopPushoff"
+        >
+            {link.modalAlternativeText.text
+                ? link.modalAlternativeText.text
+                : link.name}
+        </Header>
+    );
+};
 
-export default ModalHeader
+ModalHeader.propTypes = {
+    link: PropTypes.object,
+};
+
+export default ModalHeader;

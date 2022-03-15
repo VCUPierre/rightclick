@@ -1,16 +1,18 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
-import './ModalLinks.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react';
+import './ModalLinks.css';
 
-const ModalLinks = (props) => {
-    return <Button 
-            as='a' 
-            href={props.link.link}
-            fluid
-            className="pushoffButtom"
-            >
-                {props.link.name}
-            </Button>
-}
+const ModalLinks = ({ link }) => {
+    return (
+        <Button as="a" href={link.link} fluid className="pushoffButtom">
+            {link.name}
+        </Button>
+    );
+};
 
-export default ModalLinks
+ModalLinks.propTypes = {
+    link: PropTypes.object,
+};
+
+export default ModalLinks;

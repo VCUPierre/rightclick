@@ -1,37 +1,44 @@
-import React from "react";
-import BioModal from "./BioModal";
-import Banner from "../Banner/Banner";
-import "../Links/Links.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import BioModal from './BioModal';
+import Banner from '../Banner/Banner';
+import '../Links/Links.css';
 
-const Bio = (props) => {
+const Bio = ({ link, deviceSize, customFont }) => {
     return (
         <div>
-            {props.link.featured ? (
+            {link.featured ? (
                 <div>
                     <Banner
-                        text={props.link.featuredText}
-                        color={props.link.featuredColor}
-                        bannerSide={props.link.bannerSide}
+                        text={link.featuredText}
+                        color={link.featuredColor}
+                        bannerSide={link.bannerSide}
                         deviceSize={
-                            props.deviceSize === "xs"
-                                ? "bannerPositionS"
-                                : props.deviceSize === "md"
-                                ? "bannerPositionM"
-                                : props.deviceSize === "lg"
-                                ? "bannerPositionL"
-                                : "bannerPositionXL"
+                            deviceSize === 'xs'
+                                ? 'bannerPositionS'
+                                : deviceSize === 'md'
+                                ? 'bannerPositionM'
+                                : deviceSize === 'lg'
+                                ? 'bannerPositionL'
+                                : 'bannerPositionXL'
                         }
-                        timer={props.link.featuredTimerDate}
-                        completeText={props.link.featuredTimerText}
-                        altColor={props.link.featuredAltStyle}
+                        timer={link.featuredTimerDate}
+                        completeText={link.featuredTimerText}
+                        altColor={link.featuredAltStyle}
                     />
-                    <BioModal links={props.link} />
+                    <BioModal link={link} />
                 </div>
             ) : (
-                <BioModal links={props.link} />
+                <BioModal link={link} />
             )}
         </div>
     );
+};
+
+Bio.propTypes = {
+    link: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
 };
 
 export default Bio;

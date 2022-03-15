@@ -1,39 +1,42 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Header } from 'semantic-ui-react';
 import Links from '../Links/Links';
 import './LinkGroup.css';
 
-const LinkGroup = (props) => (
+const LinkGroup = ({ links, deviceSize, customFont }) => (
     <div className="stretched">
         <Header
             as="h2"
             color={
-                props.links.groupColor.startsWith('RL')
-                    ? 'black'
-                    : props.links.groupColor
+                links.groupColor.startsWith('RL') ? 'black' : links.groupColor
             }
             className={
-                props.links.groupColor.startsWith('RL')
-                    ? props.links.groupColor
-                    : ''
+                links.groupColor.startsWith('RL') ? links.groupColor : ''
             }
         >
-            <span>{props.links.groupName}</span>
+            <span>{links.groupName}</span>
         </Header>
 
         <div>
-            {props.links.group.map((element, i) => {
+            {links.group.map((element, i) => {
                 return (
                     <Links
                         key={`Social-links-${i + 1}`}
                         link={element}
-                        deviceSize={props.deviceSize}
-                        customFont={props.customFont}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
                     />
                 );
             })}
         </div>
     </div>
 );
+
+LinkGroup.propTypes = {
+    links: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
+};
 
 export default LinkGroup;

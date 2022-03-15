@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid, GridColumn, Segment, Image } from 'semantic-ui-react';
 import Profile from './Profile/Profile';
 import LinkGroup from './LinkGroup/LinkGroup';
@@ -7,26 +8,34 @@ import LogoWhite from '../../assets/LogoWhite.png';
 import './Home.css';
 
 const whichLogo = (logo) => {
-    if (logo === 'white') {
-        return LogoWhite;
-    }
-    return LogoColor;
+    return logo === 'white' ? LogoWhite : LogoColor;
 };
 
-const Home = (props) => {
+const Home = ({
+    deviceSize,
+    socialLinks,
+    profileTitle,
+    profileImage,
+    linkGroups,
+    logo,
+    background,
+    customFont,
+}) => {
+    const RLLogoLink = 'https://rightclickrva.com/business';
+
     return (
         <Grid centered className="RCMarginTop-1">
             <Grid.Row className="RCMarginBottom-2">
                 <GridColumn>
                     <Profile
-                        links={props.socialLinks}
-                        deviceSize={props.deviceSize}
-                        profileImg={props.profileImage}
-                        profileTitle={props.profileTitle}
+                        socialLinks={socialLinks}
+                        deviceSize={deviceSize}
+                        profileImage={profileImage}
+                        profileTitle={profileTitle}
                     />
                 </GridColumn>
             </Grid.Row>
-            {props.linkGroups.map((linkData, index) => {
+            {linkGroups.map((linkData, index) => {
                 return (
                     <Grid.Row
                         key={`linkgroup-${index + 1}`}
@@ -35,22 +44,22 @@ const Home = (props) => {
                         <LinkGroup
                             key={index}
                             links={linkData}
-                            deviceSize={props.deviceSize}
-                            customFont={props.customFont}
+                            deviceSize={deviceSize}
+                            customFont={customFont}
                         />
                     </Grid.Row>
                 );
             })}
             <div>
-                {props.background.logoLink ? (
+                {background.logoLink ? (
                     <Grid.Row className="RCLogoZeroBottom">
                         <Segment basic className="RCLogoZeroBottom">
                             <Image
                                 className="RCLogoZeroBottom"
-                                src={props.background.logoLink}
+                                src={background.logoLink}
                                 as="a"
                                 size="tiny"
-                                href={props.background.logoActiveLink}
+                                href={background.logoActiveLink}
                                 target="_blank"
                                 spaced
                             />
@@ -62,16 +71,16 @@ const Home = (props) => {
                 <Segment
                     basic
                     className={`${
-                        props.background.logoLink
+                        background.logoLink
                             ? 'RCDoubleLogo'
                             : 'RCMarginBottom-1'
                     }`}
                 >
                     <Image
-                        src={whichLogo(props.logo)}
+                        src={whichLogo(logo)}
                         as="a"
                         size="small"
-                        href="https://rightclickrva.com/business"
+                        href={RLLogoLink}
                         target="_blank"
                         spaced
                     />
@@ -80,4 +89,16 @@ const Home = (props) => {
         </Grid>
     );
 };
+
+Home.propTypes = {
+    deviceSize: PropTypes.string,
+    socialLinks: PropTypes.object,
+    profileTitle: PropTypes.object,
+    profileImage: PropTypes.string,
+    linkGroups: PropTypes.object,
+    logo: PropTypes.string,
+    background: PropTypes.object,
+    customFont: PropTypes.string,
+};
+
 export default Home;

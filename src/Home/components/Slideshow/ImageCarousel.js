@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
     CarouselProvider,
     Slide,
@@ -13,13 +14,19 @@ import ModalLinks from '../ModalLinks/ModalLinks';
 import CustomDotGroup from './CustomDotGroup';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-const ImageCarousel = (props) => {
+const ImageCarousel = ({
+    collection,
+    linkType,
+    link,
+    name,
+    additionalLinks,
+}) => {
     const [open, setOpen] = useState(false);
     const dummyHeaderProps = {
         modalAlternativeText: {
             text: '',
         },
-        name: props.name,
+        name,
     };
 
     return (
@@ -27,13 +34,13 @@ const ImageCarousel = (props) => {
             <CarouselProvider
                 naturalSlideWidth={100}
                 naturalSlideHeight={110}
-                totalSlides={props.collection.length}
-                interval={props.collection.speed}
+                totalSlides={collection.length}
+                interval={collection.speed}
                 isPlaying
             >
-                {props.linkType === 'internal' ? (
+                {linkType === 'internal' ? (
                     <Slider>
-                        {props.collection.map((img, i) => (
+                        {collection.map((img, i) => (
                             <Slide
                                 key={`Slide-image-${i + 1}`}
                                 index={i}
@@ -43,14 +50,14 @@ const ImageCarousel = (props) => {
                             </Slide>
                         ))}
                     </Slider>
-                ) : props.linkType === 'external' ? (
+                ) : linkType === 'external' ? (
                     <Slider>
-                        {props.collection.map((img, i) => (
+                        {collection.map((img, i) => (
                             <Slide
                                 key={`Slide-image-${i + 1}`}
                                 index={i}
                                 tag="a"
-                                href={props.link}
+                                href={link}
                             >
                                 <Image src={img} />
                             </Slide>
@@ -58,7 +65,7 @@ const ImageCarousel = (props) => {
                     </Slider>
                 ) : (
                     <Slider>
-                        {props.collection.map((img, i) => (
+                        {collection.map((img, i) => (
                             <Slide key={`Slide-image-${i + 1}`} index={i}>
                                 <Image src={img} />
                             </Slide>
@@ -67,16 +74,16 @@ const ImageCarousel = (props) => {
                 )}
 
                 <Divider />
-                {props.collection.length > 7 ? (
+                {collection.length > 7 ? (
                     <>
                         <ButtonBack className={'ui button'}>Back</ButtonBack>
                         <ButtonNext className={'ui button'}>Next</ButtonNext>
                     </>
                 ) : (
-                    <CustomDotGroup slides={props.collection.length} />
+                    <CustomDotGroup slides={collection.length} />
                 )}
             </CarouselProvider>
-            {props.linkType === 'internal' ? (
+            {linkType === 'internal' ? (
                 <Modal
                     size="small"
                     onClose={() => setOpen(false)}
@@ -94,19 +101,15 @@ const ImageCarousel = (props) => {
                                 className="RCCenter RCPushDown"
                             >
                                 {/* <ModalMedia link={props.links} /> */}
-                                {props.additionalLinks
-                                    ? props.additionalLinks.map(
-                                          (element, i) => {
-                                              return (
-                                                  <ModalLinks
-                                                      key={`links-modal-${
-                                                          i + 1
-                                                      }`}
-                                                      link={element}
-                                                  />
-                                              );
-                                          }
-                                      )
+                                {additionalLinks
+                                    ? additionalLinks.map((element, i) => {
+                                          return (
+                                              <ModalLinks
+                                                  key={`links-modal-${i + 1}`}
+                                                  link={element}
+                                              />
+                                          );
+                                      })
                                     : ' '}
                             </Modal.Content>
                         </Grid.Row>
@@ -117,6 +120,14 @@ const ImageCarousel = (props) => {
             )}
         </>
     );
+};
+
+ImageCarousel.propTypes = {
+    collection: PropTypes.array,
+    linkType: PropTypes.string,
+    link: PropTypes.string,
+    name: PropTypes.string,
+    additionalLinks: PropTypes.array,
 };
 
 export default ImageCarousel;

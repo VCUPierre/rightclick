@@ -1,29 +1,54 @@
-import React from 'react'
-import Banner from '../Banner/Banner'
-import ModalMedia from '../ModalMedia/ModalMedia'
-import '../Links/Links.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Banner from '../Banner/Banner';
+import ModalMedia from '../ModalMedia/ModalMedia';
+import '../Links/Links.css';
 
-
-const ItemLinks = (props) => {
-    return <div>
-        {props.link.featured 
-        ?
+const ItemLinks = ({ link, deviceSize, customFont }) => {
+    return (
         <div>
-            <Banner 
-                text={props.link.featuredText} 
-                color={props.link.featuredColor} 
-                bannerSide={props.link.bannerSide} 
-                deviceSize={props.deviceSize === 'xs' ? "bannerPositionS" : props.deviceSize === "md" ? "bannerPositionM" : props.deviceSize === "lg" ? "bannerPositionL" : "bannerPositionXL"}
-                timer={props.link.featuredTimerDate}
-                completeText={props.link.featuredTimerText}
-                altColor={props.link.featuredAltStyle}
-            />
-            <ModalMedia customFont={props.customFont} link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
-    </div>
-    :
-    <ModalMedia customFont={props.customFont} link={props.link} type={props.link.type} deviceSize={props.deviceSize}/>
-    }
-    </div>
-}
+            {link.featured ? (
+                <div>
+                    <Banner
+                        text={link.featuredText}
+                        color={link.featuredColor}
+                        bannerSide={link.bannerSide}
+                        deviceSize={
+                            deviceSize === 'xs'
+                                ? 'bannerPositionS'
+                                : deviceSize === 'md'
+                                ? 'bannerPositionM'
+                                : deviceSize === 'lg'
+                                ? 'bannerPositionL'
+                                : 'bannerPositionXL'
+                        }
+                        timer={link.featuredTimerDate}
+                        completeText={link.featuredTimerText}
+                        altColor={link.featuredAltStyle}
+                    />
+                    <ModalMedia
+                        customFont={customFont}
+                        link={link}
+                        type={link.type}
+                        deviceSize={deviceSize}
+                    />
+                </div>
+            ) : (
+                <ModalMedia
+                    customFont={customFont}
+                    link={link}
+                    type={link.type}
+                    deviceSize={deviceSize}
+                />
+            )}
+        </div>
+    );
+};
 
-export default ItemLinks
+ItemLinks.propTypes = {
+    link: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
+};
+
+export default ItemLinks;

@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Modal, Button, Grid, Header } from 'semantic-ui-react';
 import ModalHeader from '../ModalHeader/ModalHeader';
 import './BioModal.css';
 
-const LinksModal = (props) => {
-    const coloredButton = props.links.buttonColor;
+const BioModal = ({ link }) => {
+    const coloredButton = link.buttonColor;
 
     return (
         <div>
@@ -14,29 +15,29 @@ const LinksModal = (props) => {
                     <Button
                         fluid
                         size="big"
-                        color={props.links.buttonColor}
+                        color={link.buttonColor}
                         {...(coloredButton
                             ? {
-                                  className: `RCPadding fontColor ${props.link.fontColor}`,
+                                  className: `RCPadding fontColor ${link.fontColor}`,
                               }
                             : { className: 'RCPadding RCWhiteBG' })}
                     >
-                        {props.links.name}
+                        {link.name}
                     </Button>
                 }
                 closeIcon
             >
                 <Grid centered columns={2}>
-                    {props.links.modalAlternativeText.removed ? (
+                    {link.modalAlternativeText.removed ? (
                         ''
                     ) : (
                         <Grid.Row className="RCTitleFix">
-                            <ModalHeader data={props.links} />
+                            <ModalHeader link={link} />
                         </Grid.Row>
                     )}
                     <Grid.Row className="RLBio">
                         <Modal.Content image className="RCCenter RCPushDown">
-                            {props.links.bioContent.map((x, i) => (
+                            {link.bioContent.map((x, i) => (
                                 <Header as="h2" key={`Bio-header-${i + 1}`}>
                                     {x.header}
                                     <Header.Subheader content={x.subHeader} />
@@ -50,4 +51,8 @@ const LinksModal = (props) => {
     );
 };
 
-export default LinksModal;
+BioModal.propTypes = {
+    link: PropTypes.object,
+};
+
+export default BioModal;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { Image, Header } from 'semantic-ui-react';
 import Banner from '../Banner/Banner';
@@ -10,67 +11,69 @@ const useStyles = createUseStyles({
     },
 });
 
-const Still_External = (props) => {
+const Still_External = ({ link, deviceSize, customFont, ...props }) => {
     const classes = useStyles(props);
 
     return (
         <div>
-            {props.link.featured ? (
+            {link.featured ? (
                 <div>
                     <Banner
-                        text={props.link.featuredText}
-                        color={props.link.featuredColor}
-                        bannerSide={props.link.bannerSide}
+                        text={link.featuredText}
+                        color={link.featuredColor}
+                        bannerSide={link.bannerSide}
                         deviceSize={
-                            props.deviceSize === 'xs'
+                            deviceSize === 'xs'
                                 ? 'bannerPositionS'
-                                : props.deviceSize === 'md'
+                                : deviceSize === 'md'
                                 ? 'bannerPositionM'
-                                : props.deviceSize === 'lg'
+                                : deviceSize === 'lg'
                                 ? 'bannerPositionL'
                                 : 'bannerPositionXL'
                         }
-                        timer={props.link.featuredTimerDate}
-                        completeText={props.link.featuredTimerText}
-                        altColor={props.link.featuredAltStyle}
+                        timer={link.featuredTimerDate}
+                        completeText={link.featuredTimerText}
+                        altColor={link.featuredAltStyle}
                     />
-                    <a href={props.link.link}>
+                    <a href={link.link}>
                         <Image
                             wrapped
                             size="medium"
-                            src={props.link.mainMedia.link}
+                            src={link.mainMedia.link}
                         />
                         <Header
                             as="h3"
                             textAlign="center"
                             className={`RCborderNone RCtopPushoff ${classes.customFont}`}
                         >
-                            {props.link.modalAlternativeText.text
-                                ? props.link.modalAlternativeText.text
-                                : props.link.mainMedia.mediaText}
+                            {link.modalAlternativeText.text
+                                ? link.modalAlternativeText.text
+                                : link.mainMedia.mediaText}
                         </Header>
                     </a>
                 </div>
             ) : (
-                <a href={props.link.link}>
-                    <Image
-                        wrapped
-                        size="medium"
-                        src={props.link.mainMedia.link}
-                    />
+                <a href={link.link}>
+                    <Image wrapped size="medium" src={link.mainMedia.link} />
                     <Header
                         as="h3"
                         textAlign="center"
                         className={`RCborderNone RCtopPushoff TEST ${classes.customFont}`}
                     >
-                        {props.link.modalAlternativeText.text
-                            ? props.link.modalAlternativeText.text
-                            : props.link.mainMedia.mediaText}
+                        {link.modalAlternativeText.text
+                            ? link.modalAlternativeText.text
+                            : link.mainMedia.mediaText}
                     </Header>
                 </a>
             )}
         </div>
     );
+};
+
+Still_External.propTypes = {
+    link: PropTypes.object,
+    deviceSize: PropTypes.string,
+    customFont: PropTypes.string,
 };
 
 export default Still_External;
