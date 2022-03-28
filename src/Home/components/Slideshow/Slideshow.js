@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Header } from 'semantic-ui-react';
 import Banner from '../Banner/Banner';
 import ImageCarousel from './ImageCarousel';
-// import CardCarousel from "./CardCarousel";
 
 const Slideshow = ({ link, deviceSize, customFont }) => {
     return (

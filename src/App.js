@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './Home/components/Home';
 import { useMediaPredicate } from 'react-media-hook';
-// import { createUseStyles } from 'react-jss';
 import GoogleFontLoader from 'react-google-font-loader';
 import {
     LOGO,
@@ -14,29 +13,12 @@ import {
 import { Helmet } from 'react-helmet';
 import './App.css';
 
-// const useStyles = createUseStyles({
-// root: {
-//     height: `100%`,
-// },
-// backgroundImg: {
-//     'background-image': `url(${
-//         BACKGROUND.image ? BACKGROUND.imageLink : ''
-//     })`,
-//     'background-repeat': 'no-repeat',
-//     'background-position': '50% 45%',
-//     'background-attachment': 'fixed',
-//     'background-size': 'contain',
-// },
-//  'background-color': `${BACKGROUND.color}`
-// });
-
 const linkGroups = [LINK_GROUP_1];
 
 const App = () => {
     const xsScreen = useMediaPredicate('(max-width: 430px)');
     const mdScreen = useMediaPredicate('(max-width: 768px)');
     const lgScreen = useMediaPredicate('(max-width: 1024px)');
-    // const classes = useStyles();
 
     return (
         <div>

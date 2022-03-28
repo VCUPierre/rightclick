@@ -5,12 +5,7 @@ import SocialLinks from '../SocialLinks/SocialLinks';
 import ProfilePic from '../ProfilePic/ProfilePic';
 import './profile.css';
 
-const Profile = ({
-    socialLinks,
-    // deviceSize,
-    profileImage,
-    profileTitle,
-}) => (
+const Profile = ({ socialLinks, profileImage, profileTitle }) => (
     <div>
         <Header
             as="h1"

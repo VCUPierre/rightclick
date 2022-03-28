@@ -100,7 +100,6 @@ const ImageCarousel = ({
                                 image
                                 className="RCCenter RCPushDown"
                             >
-                                {/* <ModalMedia link={props.links} /> */}
                                 {additionalLinks
                                     ? additionalLinks.map((element, i) => {
                                           return (
