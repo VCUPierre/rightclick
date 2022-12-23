@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     },
 });
 
-const Still_External = ({ link, deviceSize, customFont, ...props }) => {
+const Still_External = ({ link, deviceSize, ...props }) => {
     const classes = useStyles(props);
 
     return (
@@ -73,7 +73,6 @@ const Still_External = ({ link, deviceSize, customFont, ...props }) => {
 Still_External.propTypes = {
     link: PropTypes.object,
     deviceSize: PropTypes.string,
-    customFont: PropTypes.string,
 };
 
 export default Still_External;

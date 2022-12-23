@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
     },
 });
 
-const LinksModal = ({ link, customFont, deviceSize, ...props }) => {
+const LinksModal = ({ link, deviceSize, ...props }) => {
     const classes = useStyles(props);
     const coloredButton = link.buttonColor;
 
@@ -71,7 +71,6 @@ const LinksModal = ({ link, customFont, deviceSize, ...props }) => {
 
 LinksModal.propTypes = {
     link: PropTypes.object,
-    customFont: PropTypes.string,
     deviceSize: PropTypes.string,
 };
 

@@ -31,6 +31,7 @@ const Slideshow = ({ link, deviceSize, customFont }) => {
                         linkType={link.mainMedia.linkType}
                         link={link.link}
                         name={link.mainMedia.mediaText}
+                        modalAlternativeText={link.modalAlternativeText}
                         additionalLinks={link.additionalLinks}
                     />
                     <Header
@@ -50,6 +51,7 @@ const Slideshow = ({ link, deviceSize, customFont }) => {
                         link={link.link}
                         linkType={link.mainMedia.linkType}
                         name={link.mainMedia.mediaText}
+                        modalAlternativeText={link.modalAlternativeText}
                         additionalLinks={link.additionalLinks}
                     />
                     <Header

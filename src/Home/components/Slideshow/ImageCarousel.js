@@ -18,14 +18,13 @@ const ImageCarousel = ({
     collection,
     linkType,
     link,
-    name,
     additionalLinks,
+    name,
+    modalAlternativeText,
 }) => {
     const [open, setOpen] = useState(false);
-    const dummyHeaderProps = {
-        modalAlternativeText: {
-            text: '',
-        },
+    const modalProps = {
+        modalAlternativeText,
         name,
     };
 
@@ -93,7 +92,7 @@ const ImageCarousel = ({
                 >
                     <Grid centered columns={2}>
                         <Grid.Row className="RCTitleFix">
-                            <ModalHeader data={dummyHeaderProps} />
+                            <ModalHeader link={modalProps} />
                         </Grid.Row>
                         <Grid.Row>
                             <Modal.Content

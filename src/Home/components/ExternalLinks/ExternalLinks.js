@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
     },
 });
 
-const ExternalLinks = ({ link, deviceSize, customFont, ...props }) => {
+const ExternalLinks = ({ link, deviceSize, ...props }) => {
     const classes = useStyles(props);
     const coloredButton = link.buttonColor;
 
@@ -99,7 +99,6 @@ const ExternalLinks = ({ link, deviceSize, customFont, ...props }) => {
 ExternalLinks.propTypes = {
     link: PropTypes.object,
     deviceSize: PropTypes.string,
-    customFont: PropTypes.string,
 };
 
 export default ExternalLinks;
