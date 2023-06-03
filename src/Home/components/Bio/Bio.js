@@ -26,10 +26,10 @@ const Bio = ({ link, deviceSize, customFont }) => {
                         completeText={link.featuredTimerText}
                         altColor={link.featuredAltStyle}
                     />
-                    <BioModal link={link} />
+                    <BioModal link={link} customFont={customFont} />
                 </div>
             ) : (
-                <BioModal link={link} />
+                <BioModal link={link} customFont={customFont} />
             )}
         </div>
     );

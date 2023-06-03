@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { Button } from 'semantic-ui-react';
 import Banner from '../Banner/Banner';
+import useCustomFont from '../../hooks/useCustomFont';
 import '../Links/Links.css';
 import './button.css';
 
-const useStyles = createUseStyles({
-    customFont: {
-        'font-family': (props) => [props.customFont, '!important'],
-    },
-});
-
 const ExternalLinks = ({ link, deviceSize, ...props }) => {
-    const classes = useStyles(props);
+    const classes = useCustomFont(props);
     const coloredButton = link.buttonColor;
+    const colorProp = {};
+
+    if (coloredButton) {
+        colorProp.color = coloredButton;
+    }
 
     return (
         <div>
@@ -40,26 +39,32 @@ const ExternalLinks = ({ link, deviceSize, ...props }) => {
                     <Button
                         as="a"
                         href={link.link}
-                        {...(coloredButton
-                            ? {
-                                  className: `RCPadding ${classes.customFont} ${
-                                      link.fontColor
-                                          ? `fontColor ${link.fontColor}`
-                                          : ''
-                                  }`,
-                              }
-                            : {
-                                  className: `RCPadding RCWhiteBG ${
-                                      classes.customFont
-                                  } ${
-                                      link.fontColor
-                                          ? `fontColor ${link.fontColor}`
-                                          : ''
-                                  }`,
-                              })}
-                        color={link.buttonColor}
+                        className={`RCPadding ${classes.customFont} ${
+                            !coloredButton ? 'RCWhiteBG' : ''
+                        } ${
+                            link.fontColor ? `fontColor ${link.fontColor}` : ''
+                        }`}
+                        // {...(coloredButton
+                        //     ? {
+                        //           className: `RCPadding ${classes.customFont} ${
+                        //               link.fontColor
+                        //                   ? `fontColor ${link.fontColor}`
+                        //                   : ''
+                        //           }`,
+                        //       }
+                        //     : {
+                        //           className: `RCPadding RCWhiteBG ${
+                        //               classes.customFont
+                        //           } ${
+                        //               link.fontColor
+                        //                   ? `fontColor ${link.fontColor}`
+                        //                   : ''
+                        //           }`,
+                        //       })}
+                        // color={link.buttonColor}
                         size="big"
                         fluid
+                        {...colorProp}
                     >
                         {link.name}
                     </Button>
@@ -68,26 +73,30 @@ const ExternalLinks = ({ link, deviceSize, ...props }) => {
                 <Button
                     as="a"
                     href={link.link}
-                    {...(coloredButton
-                        ? {
-                              className: `RCPadding ${classes.customFont} ${
-                                  link.fontColor
-                                      ? `fontColor ${link.fontColor}`
-                                      : ''
-                              }`,
-                          }
-                        : {
-                              className: `RCPadding RCWhiteBG ${
-                                  classes.customFont
-                              } ${
-                                  link.fontColor
-                                      ? `fontColor ${link.fontColor}`
-                                      : ''
-                              }`,
-                          })}
-                    color={link.buttonColor}
+                    className={`RCPadding ${classes.customFont} ${
+                        !coloredButton ? 'RCWhiteBG' : ''
+                    } ${link.fontColor ? `fontColor ${link.fontColor}` : ''}`}
+                    // {...(coloredButton
+                    //     ? {
+                    //           className: `RCPadding ${classes.customFont} ${
+                    //               link.fontColor
+                    //                   ? `fontColor ${link.fontColor}`
+                    //                   : ''
+                    //           }`,
+                    //       }
+                    //     : {
+                    //           className: `RCPadding RCWhiteBG ${
+                    //               classes.customFont
+                    //           } ${
+                    //               link.fontColor
+                    //                   ? `fontColor ${link.fontColor}`
+                    //                   : ''
+                    //           }`,
+                    //       })}
+                    // color={link.buttonColor}
                     size="big"
                     fluid
+                    {...colorProp}
                 >
                     {link.name}
                 </Button>

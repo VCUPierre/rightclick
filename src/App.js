@@ -5,6 +5,7 @@ import GoogleFontLoader from 'react-google-font-loader';
 import { SOCIAL_LINKS, LINK_GROUPS, PROFILE } from './assets/usersData/data.js';
 import { Helmet } from 'react-helmet';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css';
 
 const App = () => {
     const xsScreen = useMediaPredicate('(max-width: 430px)');

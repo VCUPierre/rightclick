@@ -2,10 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Button, Grid, Header } from 'semantic-ui-react';
 import ModalHeader from '../ModalHeader/ModalHeader';
+import useCustomFont from '../../hooks/useCustomFont';
 import './BioModal.css';
 
-const BioModal = ({ link }) => {
+const BioModal = ({ link, ...props }) => {
+    const classes = useCustomFont(props);
     const coloredButton = link.buttonColor;
+    const colorProp = {};
+
+    if (coloredButton) {
+        colorProp.color = coloredButton;
+    }
 
     return (
         <div>
@@ -15,12 +22,12 @@ const BioModal = ({ link }) => {
                     <Button
                         fluid
                         size="big"
-                        color={link.buttonColor}
-                        {...(coloredButton
-                            ? {
-                                  className: `RCPadding fontColor ${link.fontColor}`,
-                              }
-                            : { className: 'RCPadding RCWhiteBG' })}
+                        className={`RCPadding ${
+                            coloredButton
+                                ? `fontColor ${link.fontColor}`
+                                : 'RCWhiteBG'
+                        } ${classes.customFont}`}
+                        {...colorProp}
                     >
                         {link.name}
                     </Button>

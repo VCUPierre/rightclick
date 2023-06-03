@@ -5,10 +5,12 @@ import SocialLink from '../SocialLink/SocialLink';
 
 const SocialLinks = ({ socialLinks }) => (
     <Grid.Row
-        className={`RCNoTopPadding  ${
-            // will need to enforce 'all or nothing' on surrounding social links
-            socialLinks.group[0].surrounded ? 'RCMarginBottom-2' : ''
-        }`}
+        className={`RCNoTopPadding  `}
+        //     ${
+        //     // will need to enforce 'all or nothing' on surrounding social links
+        //     socialLinks.group[0].surrounded ? 'RCMarginBottom-2' : ''
+        // }
+        // `}
     >
         {socialLinks.group.map((link, i) => {
             return <SocialLink key={`social-link-${i + 1}`} link={link} />;

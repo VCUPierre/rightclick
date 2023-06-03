@@ -4,7 +4,9 @@ import { Image } from 'semantic-ui-react';
 import './style.css';
 
 const ProfilePic = ({ src }) => (
-    <Image src={src} className="RLFixCenter RLOneSize" rounded />
+    <div style={{ maxWidth: '250px' }}>
+        <Image src={src} className="RLFixCenter RLOneSize" rounded />
+    </div>
 );
 
 ProfilePic.propTypes = {

@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { Modal, Button, Grid } from 'semantic-ui-react';
 import ModalHeader from '../ModalHeader/ModalHeader';
 import ModalMedia from '../ModalMedia/ModalMedia';
 import ModalLinks from '../ModalLinks/ModalLinks';
+import useCustomFont from '../../hooks/useCustomFont';
 import './LinkModal.css';
 import './button.css';
 
-const useStyles = createUseStyles({
-    customFont: {
-        'font-family': (props) => props.customFont,
-    },
-});
-
 const LinksModal = ({ link, deviceSize, ...props }) => {
-    const classes = useStyles(props);
+    const classes = useCustomFont(props);
     const coloredButton = link.buttonColor;
+    const colorProp = {};
+
+    if (coloredButton) {
+        colorProp.color = coloredButton;
+    }
 
     return (
         <div>
@@ -26,14 +25,19 @@ const LinksModal = ({ link, deviceSize, ...props }) => {
                     <Button
                         fluid
                         size="big"
-                        color={link.buttonColor}
-                        {...(coloredButton
-                            ? {
-                                  className: `RCPadding fontColor ${link.fontColor} ${classes.customFont}`,
-                              }
-                            : {
-                                  className: `RCPadding RCWhiteBG ${classes.customFont}`,
-                              })}
+                        className={`RCPadding ${
+                            coloredButton
+                                ? `fontColor ${link.fontColor}`
+                                : 'RCWhiteBG'
+                        } ${classes.customFont}`}
+                        {...colorProp}
+                        // {...(coloredButton
+                        //     ? {
+                        //           className: `RCPadding fontColor ${link.fontColor} ${classes.customFont}`,
+                        //       }
+                        //     : {
+                        //           className: `RCPadding RCWhiteBG ${classes.customFont}`,
+                        //       })}
                     >
                         {link.name}
                     </Button>

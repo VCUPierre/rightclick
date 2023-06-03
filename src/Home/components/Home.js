@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, GridColumn, Segment, Image, Header } from 'semantic-ui-react';
+import { Grid, Segment, Image, Header } from 'semantic-ui-react';
 import Profile from './Profile/Profile';
 import LinkGroup from './LinkGroup/LinkGroup';
 import SocialLinks from './SocialLinks/SocialLinks';
@@ -16,22 +16,22 @@ const Home = ({ deviceSize, socialLinks, linkGroups, profile }) => {
     const RLLogoLink = 'https://rightclickrva.com/business';
 
     return (
-        <Grid centered className="RCMarginTop-1">
-            <Grid.Row className="RCMarginBottom-2">
-                <GridColumn>
+        <Grid centered columns={2} className="RCMarginTop-1">
+            <Grid.Row centered className="RCMarginBottom-1">
+                <Grid.Column width={16}>
                     <Profile
                         socialLinks={socialLinks}
                         profileImage={profile.profilePic}
                         profileTitle={profile.title}
                         customFont={profile.title.font}
                     />
-                </GridColumn>
+                </Grid.Column>
             </Grid.Row>
             {linkGroups.map((linkData, index) => {
                 return (
                     <Grid.Row
                         key={`linkgroup-${index + 1}`}
-                        className="RCNoTopPadding RCMarginBottom-2"
+                        className="RCNoTopPadding RCMarginBottom-1"
                     >
                         <LinkGroup
                             key={index}
@@ -42,7 +42,7 @@ const Home = ({ deviceSize, socialLinks, linkGroups, profile }) => {
                     </Grid.Row>
                 );
             })}
-            {socialLinks.position === 'bottom' ? (
+            {socialLinks.position === 'bottom' && (
                 <Grid.Row className="RCLogoZeroBottom">
                     <Segment basic className="RCLogoZeroBottom">
                         <Header
@@ -54,8 +54,8 @@ const Home = ({ deviceSize, socialLinks, linkGroups, profile }) => {
                         </Header>
                     </Segment>
                 </Grid.Row>
-            ) : null}
-            {profile.background.logoLink ? (
+            )}
+            {profile.background.logoLink && (
                 <Grid.Row className="RCLogoZeroBottom">
                     <Segment basic className="RCLogoZeroBottom">
                         <Image
@@ -69,7 +69,7 @@ const Home = ({ deviceSize, socialLinks, linkGroups, profile }) => {
                         />
                     </Segment>
                 </Grid.Row>
-            ) : null}
+            )}
             <Segment
                 basic
                 className={`${
@@ -94,12 +94,8 @@ const Home = ({ deviceSize, socialLinks, linkGroups, profile }) => {
 Home.propTypes = {
     deviceSize: PropTypes.string,
     socialLinks: PropTypes.object,
-    profileTitle: PropTypes.object,
-    profileImage: PropTypes.string,
+    profile: PropTypes.object,
     linkGroups: PropTypes.array,
-    logo: PropTypes.string,
-    background: PropTypes.object,
-    customFont: PropTypes.string,
 };
 
 export default Home;

@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { Image, Header } from 'semantic-ui-react';
 import Banner from '../Banner/Banner';
-
-const useStyles = createUseStyles({
-    customFont: {
-        'font-family': (props) =>
-            props.customFont ? [props.customFont, '!important'] : '',
-    },
-});
+import useCustomFont from '../../hooks/useCustomFont';
 
 const Still_External = ({ link, deviceSize, ...props }) => {
-    const classes = useStyles(props);
+    const classes = useCustomFont(props);
 
     return (
         <div>

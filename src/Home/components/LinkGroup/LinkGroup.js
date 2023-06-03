@@ -7,21 +7,31 @@ import './LinkGroup.css';
 
 const LinkGroup = ({ links, deviceSize, ...props }) => {
     const classes = useCustomFont(props);
+    const coloredHeader = links.groupColor;
+    const colorProp = {};
+
+    if (coloredHeader) {
+        colorProp.color = coloredHeader.startsWith('RL')
+            ? 'black'
+            : links.groupColor;
+    }
 
     return (
         <div className="stretched">
             <Header
                 as="h2"
-                color={
-                    links.groupColor.startsWith('RL')
-                        ? 'black'
-                        : links.groupColor
-                }
+                // color={
+                //     links.groupColor.startsWith('RL')
+                //         ? 'black'
+                //         : links.groupColor
+                // }
                 className={`
                 ${classes.customFont} ${
-                    links.groupColor.startsWith('RL') ? links.groupColor : ''
+                    // links.groupColor.startsWith('RL') ? links.groupColor : ''
+                    coloredHeader ? colorProp.color : ''
                 }
                 `}
+                {...colorProp}
             >
                 {links.groupName}
             </Header>
