@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './Home/components/Home';
 import { useMediaPredicate } from 'react-media-hook';
 import GoogleFontLoader from 'react-google-font-loader';
-import { SOCIAL_LINKS, LINK_GROUPS, PROFILE } from './assets/usersData/data.js';
+import { SOCIAL_LINKS, LINK_GROUPS, PROFILE } from './assets/usersData/PierreR';
 import { Helmet } from 'react-helmet';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
