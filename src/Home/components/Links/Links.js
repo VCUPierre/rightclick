@@ -4,6 +4,7 @@ import InternalLinks from '../InternalLinks/InternalLinks';
 import ExternalLinks from '../ExternalLinks/ExternalLinks';
 import ItemLinks from '../ItemLinks/ItemLinks';
 import StillExternal from '../Still_External/Still_External';
+import StillInternal from '../Still_Internal/Still_Internal';
 import Slideshow from '../Slideshow/Slideshow';
 import Bio from '../Bio/Bio';
 import { Segment } from 'semantic-ui-react';
@@ -67,6 +68,25 @@ const Links = ({ link, deviceSize, customFont }) => {
                         : {})}
                 >
                     <StillExternal
+                        link={link}
+                        deviceSize={deviceSize}
+                        customFont={customFont}
+                    />
+                </Segment>
+            ) : link.type === 'still/internal' ? (
+                <Segment
+                    color={link.color}
+                    {...(colored ? { inverted: true } : {})}
+                    {...(spaced
+                        ? {
+                              raised: true,
+                              className: `pushDown ${link.additionalStyle} ${
+                                  link.color ? '' : link.colorOveride
+                              }`,
+                          }
+                        : {})}
+                >
+                    <StillInternal
                         link={link}
                         deviceSize={deviceSize}
                         customFont={customFont}

@@ -5,10 +5,10 @@ import ModalHeader from '../ModalHeader/ModalHeader';
 import ModalMedia from '../ModalMedia/ModalMedia';
 import ModalLinks from '../ModalLinks/ModalLinks';
 import useCustomFont from '../../hooks/useCustomFont';
-import './LinkModal.css';
-import './button.css';
+import '../LinksModal/LinkModal.css';
+import '../LinksModal/button.css';
 
-const LinksModal = ({ link, deviceSize, ...props }) => {
+const StillInternalModal = ({ link, deviceSize, children, ...props }) => {
     const classes = useCustomFont(props);
     const coloredButton = link.buttonColor;
     const colorProp = {};
@@ -32,7 +32,7 @@ const LinksModal = ({ link, deviceSize, ...props }) => {
                         } ${classes.customFont}`}
                         {...colorProp}
                     >
-                        {link.name}
+                        {children}
                     </Button>
                 }
                 closeIcon
@@ -66,9 +66,9 @@ const LinksModal = ({ link, deviceSize, ...props }) => {
     );
 };
 
-LinksModal.propTypes = {
+StillInternalModal.propTypes = {
     link: PropTypes.object,
     deviceSize: PropTypes.string,
 };
 
-export default LinksModal;
+export default StillInternalModal;
