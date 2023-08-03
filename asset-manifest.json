@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/rightclick/static/css/main.a4f8802c.chunk.css",
-    "main.js": "/rightclick/static/js/main.e499d31e.chunk.js",
-    "main.js.map": "/rightclick/static/js/main.e499d31e.chunk.js.map",
-    "runtime-main.js": "/rightclick/static/js/runtime-main.46b30864.js",
-    "runtime-main.js.map": "/rightclick/static/js/runtime-main.46b30864.js.map",
-    "static/css/2.025b6a31.chunk.css": "/rightclick/static/css/2.025b6a31.chunk.css",
-    "static/js/2.9fa912cb.chunk.js": "/rightclick/static/js/2.9fa912cb.chunk.js",
-    "static/js/2.9fa912cb.chunk.js.map": "/rightclick/static/js/2.9fa912cb.chunk.js.map",
+    "main.css": "/rightclick/static/css/main.1b986de3.css",
+    "main.js": "/rightclick/static/js/main.6b8b6674.js",
+    "static/media/brand-icons.svg": "/rightclick/static/media/brand-icons.6729d29753e000c17489.svg",
+    "static/media/icons.svg": "/rightclick/static/media/icons.62d9dae4e0040e81c980.svg",
+    "static/media/Logo.png": "/rightclick/static/media/Logo.289ee5d8672fdb84174e.png",
+    "static/media/LogoWhite.png": "/rightclick/static/media/LogoWhite.6809407375339862c8b6.png",
+    "static/media/outline-icons.svg": "/rightclick/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
+    "static/media/icons.eot": "/rightclick/static/media/icons.a01e3f2d6c83dc3aee17.eot",
+    "static/media/icons.ttf": "/rightclick/static/media/icons.c656b8caa454ed19b9a2.ttf",
+    "static/media/brand-icons.eot": "/rightclick/static/media/brand-icons.d68fa3e67dbb653a13ce.eot",
+    "static/media/brand-icons.ttf": "/rightclick/static/media/brand-icons.65a2fb6d9aaa164b41a0.ttf",
+    "static/media/brand-icons.woff": "/rightclick/static/media/brand-icons.cac87dc00c87a5d74711.woff",
+    "static/media/brand-icons.woff2": "/rightclick/static/media/brand-icons.278156e41e0ad908cf7f.woff2",
+    "static/media/icons.woff": "/rightclick/static/media/icons.425399f81e4ce7cbd967.woff",
+    "static/media/icons.woff2": "/rightclick/static/media/icons.38c6d8bab26db77d8c80.woff2",
+    "static/media/outline-icons.eot": "/rightclick/static/media/outline-icons.752905fa5edf21fc52a1.eot",
+    "static/media/outline-icons.ttf": "/rightclick/static/media/outline-icons.5367103510b27b784827.ttf",
+    "static/media/flags.png": "/rightclick/static/media/flags.99f63ae7a743f21ab308.png",
+    "static/media/outline-icons.woff": "/rightclick/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
+    "static/media/outline-icons.woff2": "/rightclick/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/rightclick/index.html",
-    "precache-manifest.2a9b7f786e84a0152f367a6c5af82be9.js": "/rightclick/precache-manifest.2a9b7f786e84a0152f367a6c5af82be9.js",
-    "service-worker.js": "/rightclick/service-worker.js",
-    "static/css/2.025b6a31.chunk.css.map": "/rightclick/static/css/2.025b6a31.chunk.css.map",
-    "static/css/main.a4f8802c.chunk.css.map": "/rightclick/static/css/main.a4f8802c.chunk.css.map",
-    "static/js/2.9fa912cb.chunk.js.LICENSE.txt": "/rightclick/static/js/2.9fa912cb.chunk.js.LICENSE.txt",
-    "static/media/Logo.png": "/rightclick/static/media/Logo.d9d4f134.png",
-    "static/media/LogoWhite.png": "/rightclick/static/media/LogoWhite.17285244.png"
+    "main.1b986de3.css.map": "/rightclick/static/css/main.1b986de3.css.map",
+    "main.6b8b6674.js.map": "/rightclick/static/js/main.6b8b6674.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.46b30864.js",
-    "static/css/2.025b6a31.chunk.css",
-    "static/js/2.9fa912cb.chunk.js",
-    "static/css/main.a4f8802c.chunk.css",
-    "static/js/main.e499d31e.chunk.js"
+    "static/css/main.1b986de3.css",
+    "static/js/main.6b8b6674.js"
   ]
 }
