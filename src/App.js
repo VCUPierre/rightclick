@@ -1,8 +1,13 @@
 import React from 'react';
-import Home from './Home/components/Home';
+import Base from './base/Base';
 import { useMediaPredicate } from 'react-media-hook';
 import GoogleFontLoader from 'react-google-font-loader';
-import { SOCIAL_LINKS, LINK_GROUPS, PROFILE } from './assets/usersData/PierreR';
+import {
+    SOCIAL_LINKS,
+    LINK_GROUPS,
+    PROFILE,
+} from './assets/usersData/ItsCakes';
+// import data from './assets/test.json';
 import { Helmet } from 'react-helmet';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -12,9 +17,10 @@ const App = () => {
     const mdScreen = useMediaPredicate('(max-width: 768px)');
     const lgScreen = useMediaPredicate('(max-width: 1024px)');
 
+    // console.log('data', data);
+    // const { SOCIAL_LINKS, LINK_GROUPS, PROFILE } = data;
     return (
         <div>
-            {/* {console.log('window Width', window.innerWidth)} */}
             <Helmet>
                 <title>Right-Link</title>
                 <style>
@@ -36,9 +42,10 @@ const App = () => {
                 </style>
             </Helmet>
             {LINK_GROUPS.map(
-                (link) =>
+                (link, i) =>
                     link.groupFont && (
                         <GoogleFontLoader
+                            key={`linkGroupFont-${i}`}
                             fonts={[
                                 {
                                     font: link.groupFont,
@@ -48,7 +55,7 @@ const App = () => {
                         />
                     )
             )}
-            <Home
+            <Base
                 deviceSize={
                     xsScreen ? 'xs' : mdScreen ? 'md' : lgScreen ? 'lg' : 'xl'
                 }
