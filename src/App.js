@@ -6,7 +6,7 @@ import {
     SOCIAL_LINKS,
     LINK_GROUPS,
     PROFILE,
-} from './assets/usersData/ItsCakes';
+} from './assets/usersData/PierreR';
 // import data from './assets/test.json';
 import { Helmet } from 'react-helmet';
 import './App.css';
@@ -25,12 +25,19 @@ const App = () => {
                 <title>Right-Link</title>
                 <style>
                     {`
-              .RLgradient {
+              .RL-bg-img {
                 ${
                     PROFILE.background.imageLink
                         ? PROFILE.background.imageLink
                         : PROFILE.background.color
                         ? PROFILE.background.color
+                        : ''
+                }
+            }
+                .RL-bg-size {
+                ${
+                    PROFILE.background.imageSize
+                        ? PROFILE.background.imageSize
                         : ''
                 }
                }
