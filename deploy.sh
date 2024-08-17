@@ -19,7 +19,7 @@ function Dir_Exists()
     echo "***Checking if dir /${customDir} exists"
 
     local output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/${apiDirExists}/${customDir}"`
-    output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['status']")
+    output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['status'])")
 
     echo "**Dir Exists status - ${output} (1 = exists , 0 = doesn't exist)"
 
@@ -35,7 +35,7 @@ function Delete_Dir()
     echo "***Removing dir /${customDir}"
 
     local output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/json-api/cpanel?cpanel_jsonapi_user=${cpanelUser}&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=${apiDeleteDir}/${customDir}"`
-    output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['cpanelresult']['postevent']['result']");
+    output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['cpanelresult']['postevent']['result'])");
 
     echo "**Dir Deletion status - ${output} (1 = success , 0 = fail)"
 
@@ -52,7 +52,7 @@ function Create_Dir()
     echo "***Creating dir /${customDir} and subfolders"
 
     local output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/json-api/cpanel?cpanel_jsonapi_user=${cpanelUser}&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=${apiMakeDir}public_html&name=${customDir}"`
-    output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['cpanelresult']['postevent']['result']")
+    output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['cpanelresult']['postevent']['result'])")
 
     echo "**/${customDir} Dir Creation status - ${output} (1 = success , 0 = fail)"
 
@@ -62,12 +62,12 @@ function Create_Dir()
         if [ "$i" == "0" ];
         then
             output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/json-api/cpanel?cpanel_jsonapi_user=${cpanelUser}&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=${apiMakeDir}public_html/${customDir}&name=${dirArray[$i]}"`
-            output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['cpanelresult']['postevent']['result']")
+            output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['cpanelresult']['postevent']['result'])")
 
             echo "**/${customDir}/static Dir Creation status - ${output} (1 = success , 0 = fail)"
         else
             output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/json-api/cpanel?cpanel_jsonapi_user=${cpanelUser}&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=${apiMakeDir}public_html/${customDir}/static&name=${dirArray[$i]}"`
-            output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['cpanelresult']['postevent']['result']")
+            output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['cpanelresult']['postevent']['result'])")
 
             echo "**/${customDir}/static/${dirArray[$i]} Dir Creation status - ${output} (1 = success , 0 = fail)"
         fi
@@ -79,7 +79,7 @@ function Copy_Hta()
     echo "***Copying .htaaccess file to /${customDir}"
 
     local output=`curl -H"Authorization: cpanel ${cpanelUser}:${cpanelToken}" "${apiUrl}${cpanelToken}/json-api/cpanel?cpanel_jsonapi_user=${cpanelUser}&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=${apiCopyHta}${customDir}/.htaccess"`
-    output=$( echo $output | python -c "import sys, json; print json.load(sys.stdin)['cpanelresult']['postevent']['result']")
+    output=$( echo $output | python3 -c "import sys, json; print(json.load(sys.stdin)['cpanelresult']['postevent']['result'])")
 
     echo "**Copy htaccess file status - ${output} (1 = success , 0 = fail)"
 
@@ -97,19 +97,19 @@ function Upload_Files()
 
     for filename in $(ls $PWD/build/static/css);
     do
-        scp -i ~/.ssh/id_rsa $PWD/build/static/css/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/css && echo "Uploaded ${filename} successfully into ${customDir}/css!"
+        scp -i ~/.ssh/id_rsa -o HostKeyAlgorithms=ssh-rsa,ssh-dss $PWD/build/static/css/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/css && echo "Uploaded ${filename} successfully into ${customDir}/css!"
         printf "\n******\n";
     done;
 
     for filename in $(ls $PWD/build/static/js);
     do
-        scp -i ~/.ssh/id_rsa $PWD/build/static/js/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/js && echo "Uploaded ${filename} successfully into ${customDir}/js!"
+        scp -i ~/.ssh/id_rsa -o HostKeyAlgorithms=ssh-rsa,ssh-dss $PWD/build/static/js/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/js && echo "Uploaded ${filename} successfully into ${customDir}/js!"
         printf "\n******\n";
     done;
 
     for filename in $(ls $PWD/build/static/media);
     do
-        scp -i ~/.ssh/id_rsa $PWD/build/static/media/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/media && echo "Uploaded ${filename} successfully into ${customDir}/media!"
+        scp -i ~/.ssh/id_rsa -o HostKeyAlgorithms=ssh-rsa,ssh-dss $PWD/build/static/media/$filename $cpanelUser@$cpanelIP:public_html/${customDir}/static/media && echo "Uploaded ${filename} successfully into ${customDir}/media!"
         printf "\n******\n";
     done;
 }

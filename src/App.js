@@ -6,7 +6,7 @@ import {
     SOCIAL_LINKS,
     LINK_GROUPS,
     PROFILE,
-} from './assets/usersData/PierreR';
+} from './assets';
 // import data from './assets/test.json';
 import { Helmet } from 'react-helmet';
 import './App.css';
