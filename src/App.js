@@ -2,12 +2,12 @@ import React from 'react';
 import Base from './base/Base';
 import { useMediaPredicate } from 'react-media-hook';
 import GoogleFontLoader from 'react-google-font-loader';
-import {
-    SOCIAL_LINKS,
-    LINK_GROUPS,
-    PROFILE,
-} from './assets';
-// import data from './assets/test.json';
+// import {
+//     SOCIAL_LINKS,
+//     LINK_GROUPS,
+//     PROFILE,
+// } from './assets/'; use for local
+import data from './assets/index.json';
 import { Helmet } from 'react-helmet';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -17,8 +17,8 @@ const App = () => {
     const mdScreen = useMediaPredicate('(max-width: 768px)');
     const lgScreen = useMediaPredicate('(max-width: 1024px)');
 
-    // console.log('data', data);
-    // const { SOCIAL_LINKS, LINK_GROUPS, PROFILE } = data;
+    const { SOCIAL_LINKS, LINK_GROUPS, PROFILE } = data;
+    
     return (
         <div>
             <Helmet>
