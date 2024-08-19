@@ -49,6 +49,8 @@ else
     echo "sshpass is already installed."
 fi
 
+eval "$(ssh-agent -s)"
+
 # Check if SSH key is already added to ssh-agent
 if ! ssh-add -l | grep -q "$(ssh-keygen -lf ~/.ssh/id_rsa_ec2 | awk '{print $2}')"; then
     echo "Adding SSH key to ssh-agent..."
