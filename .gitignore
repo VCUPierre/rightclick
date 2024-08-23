@@ -28,3 +28,4 @@ node_modules
 /src/assets/usersData
 /favicon_package
 /ogProto.png
+.env
